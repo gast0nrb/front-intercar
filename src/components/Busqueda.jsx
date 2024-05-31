@@ -1,6 +1,6 @@
 const Busqueda = () => {
   return (
-    <header>
+    <nav>
         <div className="categorias-menu">
             <div className="button-categorias">
                 <button>Menu</button>
@@ -19,7 +19,7 @@ const Busqueda = () => {
                 <button>Buscar</button>
             </div>
         </div>
-    </header>
+    </nav>
 )   
 }
 
