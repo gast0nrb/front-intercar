@@ -40,7 +40,7 @@ const Sucursal = (width, height) => {
   ];
   const [currentSucursal, setSucursal] = useState(sucursales[0]);
   const listSucursales = sucursales.map((s) => (
-    <option id={s.id} value={s.name} key={s.id}>
+    <option id={s.id} value={s.name} key={s.id} className="">
       {s.name}
     </option>
   ));
@@ -52,18 +52,20 @@ const Sucursal = (width, height) => {
 
   //Component
   return (
-    <div className="container-sucursal">
-      <div className="title-sc">
-        <h3>Sucursal {currentSucursal.name}</h3>
+    <div className=" md:w-3/4 lg:w-1/3 group container-sucursal shadow-md h-56 rounded-md my-10 lg:ml-10 md:mx-auto lg:mr-3 text-center duration-300 hover:scale-110">
+    <div className="group-hover:bg-orange-400 w-full pt-5 h-full rounded-sm">
+      <div className="title-sc scale-110 w-5/6 mx-auto ">
+        <h3 className="lg:text-xl xl:text-2xl font-bold">SUCURSALES</h3>
       </div>
       <div className="mapa-sucursal">
-        <iframe src={currentSucursal.url}></iframe>
+        <iframe className="w-full rounded-sm p-2" src={currentSucursal.url}></iframe>
       </div>
-      <div className="select-sucursal">
-        <select name="" id="" onChange={changeState}>
+      <div className="select-sucursal group">
+        <select name="" id="" className="group-hover:bg-orange-400 shadow-md rounded-sm p-2 w-5/6" onChange={changeState}>
           {listSucursales}
         </select>
       </div>
+    </div>
     </div>
   );
 };

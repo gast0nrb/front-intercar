@@ -7,8 +7,8 @@ export default {
   theme: {
     screens : {
       'xl' : '1335px',
-      'lg' : '850px',
-      'md' : '400px'
+      'lg' : '980px',
+      'md' : '270px'
     },
     extend: {},
   },

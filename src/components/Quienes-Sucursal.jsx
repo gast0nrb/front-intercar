@@ -3,9 +3,9 @@ import Sucursal from './Sucursal'
 
 const QuienesSucursal = () => {
 return (
-    <div className="Container-qs">
+    <div className="Container-qs lg:flex  md:flex-wrap justify-center">
         <Quienes/>
-        <Sucursal/>
+        <Sucursal className=""/>
     </div>
 )
 }
