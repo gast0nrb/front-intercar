@@ -10,7 +10,10 @@ function App() {
   return (
     <>
     <Header/> 
+    <Busqueda/>
+    <Productos/>
     <QuienesSucursal/>
+    <Footer/>
     </>
   )
 }
