@@ -10,7 +10,7 @@ const Card = ({
 }) => {
   return (
     <div className="group container text-center py-14 h-max flex justify-center hover:scale-110 duration-500">
-      <div className="container-img md:w-max lg:w-5/6 text-center group-hover:bg-neutral-800 pb-3 rounded-sm shadow-md">
+      <div className="container-img md:w-max lg:w-4/6 text-center group-hover:bg-neutral-800 pb-3 rounded-sm shadow-md">
         <a href="">
           <img className="rounded-sm w-full" src={url} alt={title} />
         </a>

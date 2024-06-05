@@ -1,21 +1,25 @@
-import Busqueda from "./components/Busqueda"
-import Header from "./components/Header"
-import Productos from "./components/Productos"
-import QuienesSucursal from "./components/Quienes-Sucursal"
-import Footer from "./components/Footer"
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 
+import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
+import ProductoPage from "./pages/ProductoPage"
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<HomePage />} />
+      <Route path="/producto" element={<ProductoPage/>}/>
+    </Route>
+  )
+);
 
 function App() {
-
-  return (
-    <>
-    <Header/> 
-    <Busqueda/>
-    <Productos/>
-    <QuienesSucursal/>
-    <Footer/>
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

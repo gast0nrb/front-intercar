@@ -4,7 +4,7 @@ const Footer = ({
   mercadoLibre = "#",
 }) => {
   return (
-    <footer className="lg:h-40 bg-neutral-800 w-full md:h-auto lg:flex md:flex-row text-center lg:pb-0 md:pb-4">
+    <footer className="bg-neutral-800 w-full md:h-auto lg:h-max lg:flex md:flex-row text-center lg:pb-0 md:pb-4">
       <div className=" flex-row md:w-full ctc h-full lg:w-2/6 lg:border-r-2 my-auto lg:border-neutral-600 pt-10 md:mx-auto lg:mx-0">
         <h3 className="text-neutral-300 md:text-xs lg:text-2xl">CONTACTANOS</h3>
         <div className="ig">
@@ -23,7 +23,7 @@ const Footer = ({
           </a>
         </div>
       </div>
-      <div className="lg md:mx-auto lg:mx-0 w-2/6 lg:border-r-2 pt-3 lg:border-neutral-600 h-full ">
+      <div className="lg md:mx-auto lg:mx-0 w-2/6 lg:border-r-2 pt-3 lg:border-neutral-600 max-h-min">
         <img className="lg:w-2/6 md:w-3/6 mx-auto" src="/logo.png" alt="" />
       </div>
       <div className="dsg w-2/6 my-auto text-sm md:hidden lg:block">
