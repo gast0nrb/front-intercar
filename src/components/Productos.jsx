@@ -1,10 +1,10 @@
 import Card from "./Card";
 
-const Productos = () => {
+const Productos = ({title}) => {
   return (
     <>
-      <h3 className="text-center md:text-2xl lg:text-5xl font-bold mt-24">
-        PRODUCTOS EN OFERTA
+      <h3 className={`text-center md:text-2xl lg:text-5xl font-bold mt-24`}>
+        {title}
       </h3>
       <div className="container justify-center min-w-full flex px-auto">
         <div className=" my-auto mx-auto px-2">

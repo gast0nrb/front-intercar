@@ -4,7 +4,7 @@ import QuienesSucursal from "../components/Quienes-Sucursal";
 const HomePage = () => {
   return (
     <>
-      <Productos />
+      <Productos title={"PRODUCTOS EN OFERTA"} />
       <QuienesSucursal />
     </>
   );
