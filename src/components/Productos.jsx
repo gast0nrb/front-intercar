@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-const Productos = ({title}) => {
+const Productos = ({title = 'PUT SOME TITLE HERE'}) => {
   return (
     <>
       <h3 className={`text-center md:text-2xl lg:text-5xl font-bold mt-24`}>

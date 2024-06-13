@@ -11,11 +11,11 @@ const Nav = () => {
         }
     }
   return (
-    <nav className="min-w-min bg-neutral-800 text-gray-400 lg:text-1xl md:text-1xl">
+    <nav className="min-w-min bg-neutral-800 text-gray-400">
       <div className="md:block lg:hidden w-full md:text-sm lg:text-xl">
         <button className="w-full hover:bg-black hover:text-orange-500 rounded-sm" onClick={changeShowUp}>MENU</button>
       </div>
-      <ul className={`lg:${values[1]} md:${showUp} md:text-xs lg:text-xl`}>
+      <ul className={`lg:${values[1]} md:${showUp} md:text-xs lg:text-md`}>
         <li className="xl:mx-6 lg:mx-4 lg:inline-block xl:px-6 lg:px-4 hover:text-orange-500 hover:bg-black rounded-sm">
           <a href="">CATEGORIAS</a>
         </li>
