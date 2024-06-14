@@ -11,7 +11,7 @@ const Nav = () => {
         }
     }
   return (
-    <nav className="min-w-min bg-neutral-800 text-gray-400">
+    <nav className="min-w-min bg-neutral-800 text-gray-400 text-center">
       <div className="md:block lg:hidden w-full md:text-sm lg:text-xl">
         <button className="w-full hover:bg-black hover:text-orange-500 rounded-sm" onClick={changeShowUp}>MENU</button>
       </div>
