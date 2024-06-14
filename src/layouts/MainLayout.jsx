@@ -10,7 +10,7 @@ const MainLayout = () => {
       <Header />
       <Busqueda />
       <Outlet />
-      <Footer />
+      <Footer/>
     </>
   );
 };
