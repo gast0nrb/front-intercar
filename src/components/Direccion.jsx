@@ -16,9 +16,9 @@ const Direccion = () => {
 
   const [currentCiudad, setCiudad] = useState(ComunaCiudad[0]);
 
-  function changeValues (id)  {
-    let obj = ComunaCiudad.filter((v) => v.id == id )[0]
-    setCiudad(obj)
+  function changeValues(id) {
+    let obj = ComunaCiudad.filter((v) => v.id == id)[0];
+    setCiudad(obj);
   }
 
   return (
@@ -47,10 +47,12 @@ const Direccion = () => {
           type="text"
           className="rounded-md w-5/6 text-center border-2 border-transparent focus:outline-none focus:border-orange-500 shadow-sm bg-neutral-200"
         >
-          {currentCiudad.comunas.map((v)=> <option>{v}</option>)}
+          {currentCiudad.comunas.map((v) => (
+            <option>{v}</option>
+          ))}
         </select>
       </div>
-       <div className="md:basis-full lg:basis-2/5 grow">
+      <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
           DIRECCIÓN
         </label>

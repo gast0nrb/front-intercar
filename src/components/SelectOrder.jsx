@@ -6,7 +6,7 @@ const SelectOrder = () => {
       <select
         name=""
         id=""
-        className="text-center md:text-xs lg:text-xl bg-neutral-800 text-orange-500 rounded-md lg:w-1/5 md:w-1/2 p-1"
+        className="text-center md:text-xs lg:text-md bg-neutral-800 text-orange-500 rounded-md lg:w-1/5 md:w-1/2 p-1"
       >
         {Order.map((a) => (
           <option>{a}</option>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Card = ({
   codigo = 100002,
@@ -11,9 +12,9 @@ const Card = ({
   return (
     <div className="group container text-center py-14 h-max flex justify-center hover:scale-110 duration-500">
       <div className="container-img md:w-max lg:w-4/6 text-center group-hover:bg-neutral-800 pb-3 rounded-sm shadow-md">
-        <a href="#">
+        <Link to={`/productos`}>
           <img className="rounded-sm w-full" src={url} alt={title} />
-        </a>
+        </Link>
         <h3 className="bg-neutral-800 group-hover:border-orange-500 border-b-2 font-bold text-xl group-hover:text-orange-500 text-neutral-300 ">{title}</h3>
         <div className="flex-col  justify-center mx-2 group-hover:text-white">
           <div className="flex gap-7">
@@ -29,7 +30,7 @@ const Card = ({
             <p>${precioMayorista}</p>
           </div>
           <div className="min-w-max mt-2 text-sm my-auto rounded-sm p-1 font-bold">
-            <a className="rounded border-2 group-hover:border-neutral-500 p-2" href="">{categoria}</a>
+            <Link to={`/categorias`} className="rounded border-2 group-hover:border-neutral-500 p-2" href="">{categoria}</Link>
           </div>
         </div>
       </div>

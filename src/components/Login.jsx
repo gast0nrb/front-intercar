@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Login = () => {
     return (
         <div className="md:w-11/12 lg:w-2/3 max-w-xs text-center mx-auto shadow-md rounded-md p-2 m-6 text-neutral-700 bg-neutral-100">
@@ -9,7 +11,7 @@ const Login = () => {
         <input type="password" name="pswd" required placeholder="*******************" className="bg-neutral-200 rounded-md placeholder:text-neutral-400 text-neutral-800 focus:outline-none focus:border-orange-500 border-2 border-transparent w-10/12 " />
         <button type="submit" className="block mx-auto md:w-8/12 lg:w-2/6 border-2 rounded-sm my-3 hover:border-orange-500 hover:text-orange-500 font-bold">Ingresar</button>
       </form>
-      <a href="#" className="text-orange-300 hover:text-orange-500 underline">Olvide mi contraseña</a>
+      <Link to={`/olvide`} href="#" className="text-orange-300 hover:text-orange-500 underline">Olvide mi contraseña</Link>
     </div>
     )
 }
