@@ -14,6 +14,7 @@ import LoginPage from "./pages/LoginPage";
 import RegistroPage from "./pages/RegistroPage";
 import MessageInfo from "./pages/MessageInfo";
 import OlvidePage from "./pages/OlvidePage";
+import CarritoPage from "./pages/CarritoPage"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -47,8 +48,12 @@ const router = createBrowserRouter(
           />
         }
       />
+      
+      <Route path="/carro" element={<CarritoPage title={"Tu carrito número 150"} btn1={"Agotados"} btn2={"Con stock"} checkProp={false}/>} />
     </Route>
   )
+  //Check prop le dice al carro si es que este fue revisado o ya no. 
+  //Eso conlleva a un sinfin de despliegues hacia los demaś componentes
 );
 
 function App() {
