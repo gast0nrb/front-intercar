@@ -16,6 +16,7 @@ import MessageInfo from "./pages/MessageInfo";
 import OlvidePage from "./pages/OlvidePage";
 import CarritoPage from "./pages/CarritoPage"
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
@@ -49,7 +50,7 @@ const router = createBrowserRouter(
         }
       />
       
-      <Route path="/carro" element={<CarritoPage title={"Tu carrito número 150"} btn1={"Agotados"} btn2={"Con stock"} checkProp={false}/>} />
+      <Route path="/carro/:id/:check" element={<CarritoPage title={"Tu carrito número 150"} btn1={"Agotados"} btn2={"Con stock"}/>} />
     </Route>
   )
   //Check prop le dice al carro si es que este fue revisado o ya no. 

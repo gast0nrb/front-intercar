@@ -1,32 +1,40 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CarroContext } from "../context/CarroContext";
 
 const CardListado = ({
   checkProp,
-  title = "KIT HEADLIGHT T1 MULTIVOLTAJE H4",
-  description = "KIT HEADLIGHT H4 12/24 VOLT, LUZ FRIA 6000 KELVIN, 3 MESES DE GARANTIA, SISTEMA CANBUS.",
-  precio = 15900,
-  codigo = "90008",
+  codigo,
+  description,
+  precio,
+  title, 
+  state,
+  cantidad,
+  index
 }) => {
-  const [currentCantidad, setCurrent] = useState(1);
-  const [cantidad, setCantidad] = useState(currentCantidad);
-  const [change, setChange] = useState(false);
 
-  //Cambia la cantidad, solamente si la cantidad variable (var cantidad) + el valor entregado por parametro es mayor o igual a 1
+const [change, setChange] = useState(false);
+const {setProductos, Productos} = useContext(CarroContext)
+const [acumulador, setAcumulador] = useState(Productos[index].cantidad);
+
+
+//Cambia la cantidad del acumulador del componente momentaneo
   function changeCantidad(val) {
-    if (cantidad + val >= 1) {
-      setCantidad(cantidad + val);
+    if (acumulador + val >= 1) {
+      setAcumulador(acumulador + val);
       setChange(true);//Estado de cambio, para confirmar los cambios
     }
   }
 
-  function acceptChange() {//Confirmar cambios
-    setCurrent(cantidad);
+  function acceptChange() {//Confirmar cambios y los setea al objeto pasado por context 
+    let arr = [...Productos]
+    arr[index].cantidad = acumulador
+    setProductos(arr)
     setChange(false);
   }
-  function cancelarCange() {//Cancelar los cambios y volver al valor de currentCantidad y dejar el estado de cambio en falso
-    setCurrent(currentCantidad);
-    setCantidad(currentCantidad);
+
+  function cancelarCange() {//Cancelar los cambios y vuelve al valor del objeto pasado por context
+    setAcumulador(Productos[index].cantidad);
     setChange(false);
   }
 
@@ -45,22 +53,30 @@ const CardListado = ({
           </p>
         </div>
       </div>
+      {
+        checkProp ? //Si el chequeo es true, desplegara el div con la info de agotado o no
+      <div className="w-full border-b-2">
+        <h3 className={`font-bold ${!state ? "text-orange-500 bg-neutral-800 " : "text-neutral-300 bg-red-500"}`}>PRODUCTO {state ? "AGOTADO" : "DISPONIBLE"}</h3>
+      </div>
+       : <></>
+      }
       <div className="w-full border-b-2">
         <h3 className="text-neutral-500 font-bold bg-neutral-800">SKU:{codigo}</h3>
       </div>
-      <div className="lg:flex w-full leading-7">
+      <div className="lg:flex w-full ">
         <div className="bg-neutral-800 grow basis-3/12 border-b-2">
           <h3 className="text-neutral-300 font-bold lg:border-b-2">
             VALOR UNITARIO
           </h3>
           <p className="text-neutral-300 p-1">${precio}</p>
         </div>
-        {checkProp ? (
+        {//Si el chequeo esta realizado desplegara el div sin los botones para manipular las cantidades
+        checkProp ? (
           <div className="grow justify-center basis-3/12 bg-neutral-800 border-b-2">
             <h3 className="text-neutral-300 font-bold lg:border-b-2">
               CANTIDAD
             </h3>
-            <p className="text-neutral-300">{currentCantidad}</p>
+            <p className="text-neutral-300">{Productos[index].cantidad}</p>
           </div>
         ) : (
           <div className="grow justify-center basis-3/12 bg-neutral-800 border-b-2">
@@ -76,7 +92,7 @@ const CardListado = ({
               </button>
               {
                 <p className="text-neutral-300 p-1 mx-5">
-                  {change ? cantidad : currentCantidad}
+                  {change ? acumulador : Productos[index].cantidad}
                 </p>
               }
               <button
@@ -90,11 +106,11 @@ const CardListado = ({
         )}
         <div className="grow basis-3/12 bg-neutral-800 border-b-2">
           <h3 className="text-neutral-300 font-bold lg:border-b-2">TOTAL</h3>
-          <p className=" text-neutral-300 p-1">${precio * cantidad}</p>
+          <p className=" text-neutral-300 p-1">${precio * acumulador}</p>
         </div>
       </div>
       {
-        !checkProp ?
+        !checkProp ? //Si no se ha revisado la cotización se despliegan los botones de manipulación
       <div className="flex grow bg-neutral-800">
         <div className="basis-1/3 grow border-b-2">
           <button
