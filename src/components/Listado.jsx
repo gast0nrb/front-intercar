@@ -75,7 +75,7 @@ const Listado = ({ checkProp }) => {
         a += (v.precio * v.cantidad)
     })
     }
-    if(!checkProp) {
+    if(!checkProp) { //Si no fue revisado despliega el monto total de todos los productos
       Productos.map((v)=>{
         a+= (v.precio * v.cantidad)
       })
@@ -85,8 +85,14 @@ const Listado = ({ checkProp }) => {
 
   return (
     <div className="w-10/12 shadow-md mx-auto flex flex-wrap my-7">
+      {
+        Productos.length == 0 ? //si hay productos suficientes en el arr de productos desplegamos el monto, sino no es necesario
+          <></>
+        :
       <h3 className="bg-neutral-700 w-full text-neutral-200 font-bold"> MONTO TOTAL CARRITO  <span className="text-orange-500">${totalCarro()}</span></h3>
+      }
           <CarroContext.Provider value={{ Productos, setProductos}}>
+      <CarroVacio/>
       {
       Productos.map((v, i) => (
         <div key={v.codigo}>
@@ -101,7 +107,6 @@ const Listado = ({ checkProp }) => {
           />
           {!checkProp ? (//Despliega el botón para eliminar si no se ha chequeado aun
             <button
-              value={v.codigo}
               onClick={(e) => {
                 eliminarProducto(v.codigo);
               }}

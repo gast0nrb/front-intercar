@@ -1,7 +1,13 @@
+import { CarroContext } from "../context/CarroContext"
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+
 const CarroVacio = () => {
+  const {Productos} = useContext(CarroContext)
+
     return (
         <>
-        {Productos.length == 0 ? (
+        {Productos.length == 0 ? (//Si el largo del arr de productos entregas via context es igual a 0 desplegar el componente, sino un fragmento vacio
         <div className="text-center w-full">
             <h3 className="text-2xl font-bold text-orange-500 bg-neutral-800">
               ¡ESTA VACIÓ!
