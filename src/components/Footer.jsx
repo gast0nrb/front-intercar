@@ -5,7 +5,7 @@ const Footer = ({
 }) => {
   return (
     <footer className="bg-neutral-800 text-center w-full py-5">
-        <img className=" md:w-3/12 lg:w-1/12 mx-auto" src="/logo.png" alt="" />
+        <img className=" md:w-2/12 lg:w-1/12 mx-auto" src="/logo.png" alt="" />
         <h3 className="text-neutral-300 md:text-xs lg:text-2xl">CONTACTANOS</h3>
         <a
           className="text-neutral-500 hover:text-orange-500"

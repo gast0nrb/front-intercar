@@ -22,6 +22,7 @@ el prop check revisa para saber si desplegamos o no los botones, estos solo se d
     <div className="text-center w-full my-10">
         <h1 className="lg:text-3xl md:text-lg text-neutral-800 mx-auto rounded-sm font-extrabold">{"Tu carrito número ".toUpperCase()+ id}</h1>
         <Listado checkProp={checked()}/>
+        <button className=" font-bold hover:shadow-xl duration-300  hover:text-orange-500 p-1 shadow-md rounded-md text-neutral-500 text-sm w-auto mb-10">ENVIAR COTIZACIÓN</button>
     </div>
 )
 }

@@ -112,7 +112,7 @@ const Listado = ({ checkProp }) => {
               }}
               className=" flex justify-center bg-neutral-800 p-1 text-bold text-red-500 hover:font-extrabold w-full duration-200"
             >
-              <img className="mx-2" src="/delete.svg" alt="" />
+              <img className="lg:mx-2" src="/delete.svg" alt="" />
               ELIMINAR PRODUCTO
             </button>
           ) : (
