@@ -44,7 +44,7 @@ const Nav = () => {
         <li className="xl:mx-6 lg:mx-4 xl:px-6 lg:px-2 lg:inline-block  hover:font-bold hover:text-orange-500 hover:bg-black rounded-sm">
           <Link
           onClick={changeShowUp}
-          to={`/busqueda`}>
+          to={`/busqueda/oferta`}>
             OFERTAS/LIQUIDACIÓN
           </Link>
         </li>

@@ -5,7 +5,7 @@ const CardCategory = () => {
         <div className="group md:basis-3/5 lg:basis-3/12 md:grow lg:grow-0 shadow-md m-5 my-10 rounded-md lg:hover:scale-110 lg:duration-300">
             <div className="img-container border-b-2 border-transparent group-hover:border-orange-500">
                 <Link to={`/productos`}>
-                <img src="90008.png" alt="" className="rounded-t-md" />
+                <img src="/90008.png" alt="" className="rounded-t-md" />
                 </Link>
             </div>
             <div className="data-container text-center group-hover:bg-neutral-800 group-hover:text-neutral-300">

@@ -1,5 +1,18 @@
+import { useState } from "react";
+
 const ProductoGrande = () => {
-  const currentVal = 0;
+  
+  const [currentVal, setCurrent] = useState(0);
+
+  function changeCurrent (number) {
+      if (currentVal >= 0 && number > 0){
+        setCurrent(currentVal+parseInt(number))
+    }
+    if(currentVal > 0){
+      setCurrent(currentVal+parseInt(number))
+    }
+  }
+  
   return (
     <div className="md:w-11/12 mx-auto lg:w-full lg:flex md:flex-row mb-20 pt-12 h-auto py-3">
       <div className="cointaer-foto xl:w-5/12 lg:w-6/12 md:w-11/12 lg:mb-0 shadow-lg rounded-md md:mx-auto lg:mx-6 h-auto">
@@ -31,11 +44,16 @@ const ProductoGrande = () => {
             </p>
             <div className="div-cantidad flex justify-center gap-4 pt-2 group-hover:text-neutral-300 duration-300">
               <div className="menos">
-                <button className="shadow-md w-4 rounded-sm border-2 border-transparent group-hover:border-neutral-400 duration-300">-</button>
+                <button onClick={()=> {changeCurrent(-1)}} className="shadow-md w-4 rounded-sm border-2 border-transparent group-hover:border-neutral-400 duration-300">
+                  -
+                </button>
               </div>
-              <div className="current-val">{currentVal}</div>
+              <div className="current-val">{currentVal}
+              </div>
               <div className="sum">
-                <button className="shadow-md w-4 rounded-sm border-2 border-transparent group-hover:border-neutral-400 duration-300">+</button>
+                <button onClick={()=> {changeCurrent(1)}} className="shadow-md w-4 rounded-sm border-2 border-transparent group-hover:border-neutral-400 duration-300">
+                  +
+                </button>
               </div>
             </div>
             <div className="agregar-div my-3 pt-3 border-t-2 group-hover:border-orange-500">
