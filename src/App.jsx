@@ -15,6 +15,7 @@ import RegistroPage from "./pages/RegistroPage";
 import MessageInfo from "./pages/MessageInfo";
 import OlvidePage from "./pages/OlvidePage";
 import CarritoPage from "./pages/CarritoPage"
+import ListadoCarroPage from "./pages/ListadoCarroPage";
 
 
 const router = createBrowserRouter(
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
       />
       
       <Route path="/carro/:id/:check" element={<CarritoPage title={"Tu carrito número 150"} btn1={"Agotados"} btn2={"Con stock"}/>} />
+      <Route path="/listadocarro" element={<ListadoCarroPage/>} />
     </Route>
   )
   //Check prop le dice al carro si es que este fue revisado o ya no. 

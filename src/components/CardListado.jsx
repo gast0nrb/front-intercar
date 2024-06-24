@@ -127,7 +127,7 @@ const [acumulador, setAcumulador] = useState(Productos[index].cantidad);
             onClick={acceptChange}
             disabled={!change}
           >
-            MODIFICAR
+            AGREGAR AL CARRO
           </button>
         </div>
       </div>
