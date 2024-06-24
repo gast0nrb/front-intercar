@@ -36,6 +36,9 @@ const Nav = () => {
         <li className="xl:mx-6 xl:px-6 lg:mx-4 lg:px-4 lg:inline-block hover:text-orange-500 hover:bg-black rounded-sm">
           <Link to={`/login`} href="">SOY CLIENTE</Link>
         </li>
+        <li className="xl:mx-6 xl:px-6 lg:mx-4 lg:px-4 lg:inline-block hover:text-orange-500 hover:bg-black rounded-sm">
+          <Link to={`/listadocarro`} href="">MIS CARROS</Link>
+        </li>
       </ul>
     </nav>
   );

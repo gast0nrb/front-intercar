@@ -1,4 +1,5 @@
 import ListadoCarro from "../components/ListadoCarro";
+import Pagination from "../components/Pagination";
 
 const ListadoCarroPage = () => {
     return (
@@ -8,7 +9,10 @@ const ListadoCarroPage = () => {
             <ListadoCarro checkProp={0} numeroCarro={9} cantidadItems={90}/>
             <ListadoCarro checkProp={1} cantidadItems={10} fecha="22/03/2024" numeroCarro={10} total={109500}/>
             <ListadoCarro checkProp={1} cantidadItems={20} fecha="22/06/2024" numeroCarro={11} total={90500}/>
+            <ListadoCarro checkProp={1} cantidadItems={20} fecha="22/06/2024" numeroCarro={11} total={90500}/>
+            <ListadoCarro checkProp={1} cantidadItems={20} fecha="22/06/2024" numeroCarro={11} total={90500}/>
         </div>
+        <Pagination/>
         </>
     )
 }
