@@ -1,5 +1,5 @@
 import Productos from "../components/Productos";
-import QuienesSucursal from "../components/Quienes-Sucursal";
+import QuienesSucursal from "../components/HomePageComponents/Quienes-Sucursal"
 
 const HomePage = () => {
   return (

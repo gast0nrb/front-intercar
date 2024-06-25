@@ -1,14 +1,14 @@
 const BasicInfo = () => {
-    const razonSocial = [
-        "--Seleccionar--",
-        "Informática",
-        "Venta de auto partes",
-        "Mineria",
-        "Otro",
-      ];
+  const razonSocial = [
+    "--Seleccionar--",
+    "Informática",
+    "Venta de auto partes",
+    "Mineria",
+    "Otro",
+  ];
 
   return (
-    <div className="inline-flex flex-wrap w-11/12">
+    <div className="inline-flex flex-wrap w-full">
       <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
           NOMBRE Y APELLIDO
@@ -19,6 +19,7 @@ const BasicInfo = () => {
           required
           placeholder="Ej: Santino Schopenhauer"
         />
+        <span className="text-neutral-600 p-1">*</span>
       </div>
       <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
@@ -30,6 +31,7 @@ const BasicInfo = () => {
           required
           placeholder="Ej: Venta de auto partes"
         />
+        <span className="text-neutral-600 p-1">*</span>
       </div>
       <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
@@ -41,6 +43,7 @@ const BasicInfo = () => {
           required
           placeholder="Ej: 19.683.588-0"
         />
+        <span className="text-neutral-600 p-1">*</span>
       </div>
       <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
@@ -54,6 +57,7 @@ const BasicInfo = () => {
             <option>{e}</option>
           ))}
         </select>
+        <span className="text-neutral-600 p-1">*</span>
       </div>
     </div>
   );

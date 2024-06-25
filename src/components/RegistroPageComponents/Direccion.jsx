@@ -22,7 +22,7 @@ const Direccion = () => {
   }
 
   return (
-    <div className="inline-flex flex-wrap w-11/12">
+    <div className="inline-flex flex-wrap w-full border-t-2  mt-2 pb-2">
       <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
           CIUDAD
@@ -38,6 +38,7 @@ const Direccion = () => {
             </option>
           ))}
         </select>
+        <span className="text-neutral-600 p-1">*</span>
       </div>
       <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
@@ -51,6 +52,7 @@ const Direccion = () => {
             <option>{v}</option>
           ))}
         </select>
+        <span className="text-neutral-600 p-1">*</span>
       </div>
       <div className="md:basis-full lg:basis-2/5 grow">
         <label htmlFor="" className="block">
@@ -62,6 +64,7 @@ const Direccion = () => {
           required
           placeholder="Ej: Av diez de julio 792"
         />
+        <span className="text-neutral-600 p-1">*</span>
       </div>
     </div>
   );
