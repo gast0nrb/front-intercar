@@ -1,4 +1,4 @@
-import WrapInfo from "../components/WrapInfo"
+import WrapInfo from "../components/RegistroPageComponents/WrapInfo"
 
 const RegistroPage = () => {
     return (

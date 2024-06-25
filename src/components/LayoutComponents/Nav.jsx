@@ -1,13 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CategoriasNav from "./CategoriasNav";
-import { NavContext } from "../context/NavContext";
+import { NavContext } from "../../context/NavContext";
 
 
 const Nav = () => {
   const values = ["hidden", "block"];
   const [showUp, setShowUp] = useState(values[0]);
 
+
+/** ChangeShow up
+ *  Objetivo principal: Permitir mostrar el menú.
+ *  Validaciones : {
+ *    - Revisar que el ancho actual de la ventana sea mayor a 980, ya que si es menor los elementos cambian de despliegue y no es necesario desplegarlos con estados.
+ *  }
+ */
   function changeShowUp() {
     if (parseInt(window.innerWidth) < 980) {
       if (showUp == "hidden") {

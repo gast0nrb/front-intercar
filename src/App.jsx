@@ -50,6 +50,18 @@ const router = createBrowserRouter(
           />
         }
       />
+      <Route
+        path="/infomsj"
+        element={
+          <MessageInfo
+            infoUser={"Gastón Rojas"}
+            title={
+              "En breves momentos tu cotización será revisada."
+            }
+            msjLargo="¡Estamos trabajando para ti!"
+          />
+        }
+      />
       
       <Route path="/carro/:id/:check" element={<CarritoPage title={"Tu carrito número 150"} btn1={"Agotados"} btn2={"Con stock"}/>} />
       <Route path="/listadocarro" element={<ListadoCarroPage/>} />

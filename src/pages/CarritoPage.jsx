@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import Listado from "../components/Listado";
+import { Link } from "react-router-dom";
 
 const CarritoPage = ({ btn1, btn2 }) => {
   const { check, id } = useParams();
@@ -28,9 +29,9 @@ el prop check revisa para saber si desplegamos o no los botones, estos solo se d
       {check>0 ? (
         <></>
       ) : (
-        <button className=" font-bold hover:shadow-xl duration-300  hover:text-orange-500 p-1 shadow-md rounded-md text-neutral-500 text-sm w-auto mb-10">
+        <Link to={`/infomsj`} className=" font-bold hover:shadow-xl duration-300  hover:text-orange-500 p-1 shadow-md rounded-md text-neutral-500 text-sm w-auto mb-10">
           ENVIAR COTIZACIÓN
-        </button>
+        </Link>
       )}
     </div>
   );

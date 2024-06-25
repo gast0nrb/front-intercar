@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext, useState } from "react";
-import { NavContext } from "../context/NavContext";
+import { NavContext } from "../../context/NavContext";
 import { Link } from "react-router-dom";
 
 const CategoriasNav = () => {
