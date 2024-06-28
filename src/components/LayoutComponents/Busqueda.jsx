@@ -39,10 +39,10 @@ const Busqueda = () => {
           id="busqueda"
           onClick={preventBusqueda}
           to={`/busqueda/${busqueda}`}
-          className={`h-6 w-full shadow-md border-2 hover:border-2 font-bold  p-1 rounded-md text-neutral-500 lg:text-sm  md:text-xs ${
+          className={`h-6 w-full shadow-md border-2 hover:border-2 font-bold  p-1 rounded-md text-neutral-400 lg:text-sm  md:text-xs ${
             busqueda.trimEnd().trimStart().length
-              ? `hover:text-orange-500 hover:bg-neutral-800`
-              : ``
+              ? `hover:text-orange-500`
+              : `bg-neutral-300`
           }`}
         >
           Buscar
