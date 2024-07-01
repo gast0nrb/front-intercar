@@ -10,7 +10,11 @@ export default {
       'lg' : '980px',
       'md' : '270px',
     },
-    extend: {},
+    extend: {
+      backgroundImage : {
+        'race' : "url('/a1.svg')"
+      }
+    },
   },
   plugins: [],
 }

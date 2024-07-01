@@ -15,7 +15,7 @@ const CategoriasNav = () => {
         setShowCategorias(false)
     }
   return (
-    <li onMouseLeave={hideCategorias} onMouseOver={displayCategorias} className=" xl:mx-6 lg:mx-4 lg:inline-block xl:px-6 lg:px-2 hover:text-orange-500 hover:bg-black rounded-sm hover:font-bold">
+    <li onMouseLeave={hideCategorias} onMouseOver={displayCategorias} className=" xl:mx-6 lg:mx-4 lg:inline-block xl:px-6 lg:px-2 hover:text-orange-500  rounded-sm">
       <Link to={`/categorias`} onClick={changeShowUp} href="">
         CATEGORIAS
       </Link>

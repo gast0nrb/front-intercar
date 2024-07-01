@@ -7,7 +7,7 @@ import BusquedaTitle from "../components/BusquedaPageComponents/BusquedaTitle";
 
 const BusquedaPage = ({ title }) => {
   const { name } = useParams();
-  const [existen, setExisten] = useState(true);
+  const [existen, setExisten] = useState(false);
   return (
     <>
       {existen ? (

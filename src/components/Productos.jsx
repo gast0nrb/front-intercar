@@ -3,7 +3,7 @@ import Card from "./Card";
 const Productos = ({title = 'PUT SOME TITLE HERE'}) => {
   return (
     <>
-      <h3 className={`text-center md:text-2xl lg:text-5xl font-bold mt-24`}>
+      <h3 className={`border-x-4 lg:w-fit md:w-11/12 text-center md:text-xl lg:text-5xl font-extrabold md:mt-10 lg:mt-24 bg-neutral-800 mx-auto lg:px-4 rounded-sm text-neutral-300 tracking-widest py-1 border-orange-500`}>
         {title}
       </h3>
       <div className="container justify-center min-w-full flex px-auto">
