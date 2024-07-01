@@ -8,7 +8,7 @@ const ProductoPage = () => {
         <>
         <Categoria categoria="LED"/>
        <ProductoGrande />
-       <Productos title="PRODUCTOS SIMILARES"/>
+       <Productos title="PRODUCTOS SIMILARES" reloadName={"Cargar más"}/>
        </>
     )
 }

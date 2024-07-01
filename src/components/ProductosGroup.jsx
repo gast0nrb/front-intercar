@@ -1,17 +1,15 @@
 import CardCategory from "./CardCategory";
 
 //Pasar un array en props para desplegar la info de cada producto
-const ProductosGroup = () => {
+const ProductosGroup = ({isBusqueda}) => {
   const componentArr = [
-    <CardCategory />,
-    <CardCategory />,
-    <CardCategory />,
-    <CardCategory />,
-    <CardCategory />,
-    <CardCategory />,
-    <CardCategory />,
-    <CardCategory />,
-    <CardCategory />,
+    <CardCategory isBusqueda={isBusqueda}/>,
+    <CardCategory isBusqueda={isBusqueda}/>,
+    <CardCategory isBusqueda={isBusqueda}/>,
+    <CardCategory isBusqueda={isBusqueda}/>,
+    <CardCategory isBusqueda={isBusqueda}/>,
+    <CardCategory isBusqueda={isBusqueda}/>,
+    <CardCategory isBusqueda={isBusqueda}/>,
   ];
 
 

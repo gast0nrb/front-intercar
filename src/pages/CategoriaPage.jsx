@@ -15,7 +15,7 @@ const CategoriaPage = () => {
       <>
       <SelectCategoria Categories />
       <SelectOrder />
-      <ProductosGroup />
+      <ProductosGroup isBusqueda={false} />
       <Pagination pages={25}/> 
       </>
       :

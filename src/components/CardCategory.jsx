@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const CardCategory = () => {
+const CardCategory = ({isBusqueda}) => {
     return(
         <div className="group md:basis-3/5 lg:basis-3/12 md:grow lg:grow-0 shadow-md m-5 my-10 rounded-md lg:hover:scale-110 lg:duration-300">
             <div className="img-container border-b-2 border-transparent group-hover:border-orange-500">
@@ -19,7 +19,7 @@ const CardCategory = () => {
                     <div>
                         <p><span className="font-bold">Detalle</span> $8.900</p>
                     </div>
-                    <div className="text-center">
+                    <div className={`${isBusqueda ? "text-center" : "hidden"}`}>
                         <Link to={`/categorias`} className="border-2 rounded-sm w-auto text-xs p-1 font-bold">AMPOLLETAS</Link>
                     </div>
                 </div>

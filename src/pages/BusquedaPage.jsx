@@ -7,13 +7,13 @@ import BusquedaTitle from "../components/BusquedaPageComponents/BusquedaTitle";
 
 const BusquedaPage = ({ title }) => {
   const { name } = useParams();
-  const [existen, setExisten] = useState(false);
+  const [existen, setExisten] = useState(true);
   return (
     <>
       {existen ? (
         <>
       <BusquedaTitle title={name} />
-          <ProductosGroup />
+          <ProductosGroup isBusqueda={true}/>
           <Pagination pages={6} />
         </>
       ) : (
