@@ -14,7 +14,7 @@ const QuienesItem = ({
       <div className="flex grow justify-center border-b-2 md:border-b-orange-500 border-b-orange-300 border-orange-500 bg-neutral-800 rounded-sm">
         <h3 className="text-neutral-300 font-extrabold text-xs">{title}</h3>
       </div>
-      <p className="text-neutral-700 text-xs">{text}</p>
+      <p className="p-1 text-neutral-700 text-xs">{text}</p>
       {isLink ? (
         <Link
           to={`/busqueda/${busqueda}`}

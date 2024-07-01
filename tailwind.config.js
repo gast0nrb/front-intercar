@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       backgroundImage : {
-        'race' : "url('/a1.svg')"
+        'test' : "url('/test.png')"
       }
     },
   },

@@ -39,7 +39,7 @@ const Card = ({
           <div className="min-w-max mt-2 text-sm my-auto rounded-sm p-1 font-bold">
             <Link
               to={`/categorias`}
-              className="rounded border-2 text-xs hover:text-orange-500 duration-300 hover:border-orange-500 border-neutral-300 p-1"
+              className=" hover:border-0 border-y-2 hover:border-y-2 rounded-sm text-xs duration-300 hover:border-y-orange-500 p-1 w-3/6"
               href=""
             >
               {categoria}

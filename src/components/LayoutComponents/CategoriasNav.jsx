@@ -18,7 +18,7 @@ const CategoriasNav = () => {
     <li
       onMouseLeave={hideCategorias}
       onMouseOver={displayCategorias}
-      className=" xl:mx-6 lg:mx-4 lg:inline-block xl:px-6 lg:px-2 hover:text-orange-500  rounded-sm"
+      className=" xl:mx-6 lg:mx-4 lg:inline-block hover:text-orange-500  rounded-sm"
     >
       <div className="flex justify-center gap-1">
         <div>

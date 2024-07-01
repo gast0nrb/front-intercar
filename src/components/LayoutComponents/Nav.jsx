@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
     <NavContext.Provider value={{ setShowUp, showUp, changeShowUp }}>
-      <nav className="min-w-min  bg-black text-gray-400 text-center">
+      <nav className="min-w-min  bg-neutral-800 text-gray-400 text-center">
         <div className="flex justify-center lg:hidden w-full md:text-sm lg:text-xl pt-1">
           <div className="">
             <img
@@ -35,9 +35,9 @@ const Nav = () => {
               className="w-4 mx-auto"
             ></img>
           </div>
-          <div className="mr-3">
+          <div className="">
             <button
-              className="font-extrabold w-full hover:bg-black hover:text-orange-500 rounded-sm"
+              className="font-bold text-xs  w-full hover:text-orange-500 rounded-sm"
               onClick={changeShowUp}
               onMouseOver={() => setFocus(true)}
               onMouseLeave={() => setFocus(false)}
@@ -46,11 +46,29 @@ const Nav = () => {
             </button>
           </div>
         </div>
-        <ul className={`lg:${values[1]} md:${showUp} md:text-xs lg:text-md`}>
-        <NavItem changeShowUp={changeShowUp} ListName="INICIO" route="/" srcActive="/casaActive.svg" srcInactive="/casa.svg"/>
-        <NavItem changeShowUp={changeShowUp} />
-        <NavItem changeShowUp={changeShowUp} ListName="SOY CLIENTE" route="/login" srcActive="/userActive.svg" srcInactive="/user.svg" />
-        <NavItem changeShowUp={changeShowUp} ListName="MIS CARROS" route="/listadocarro" srcActive="/carrosActive.svg" srcInactive="/carros.svg" />
+        <ul className={`lg:${values[1]} md:${showUp} md:text-xs lg:text-xs`}>
+          <NavItem
+            changeShowUp={changeShowUp}
+            ListName="INICIO"
+            route="/"
+            srcActive="/casaActive.svg"
+            srcInactive="/casa.svg"
+          />
+          <NavItem changeShowUp={changeShowUp} />
+          <NavItem
+            changeShowUp={changeShowUp}
+            ListName="SOY CLIENTE"
+            route="/login"
+            srcActive="/userActive.svg"
+            srcInactive="/user.svg"
+          />
+          <NavItem
+            changeShowUp={changeShowUp}
+            ListName="MIS CARROS"
+            route="/listadocarro"
+            srcActive="/carrosActive.svg"
+            srcInactive="/carros.svg"
+          />
           <CategoriasNav />
         </ul>
       </nav>
