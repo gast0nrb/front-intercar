@@ -53,7 +53,7 @@ const Busqueda = () => {
               : `bg-neutral-300`
           }`}
         >
-          {busqueda.length == 0 ? "Buscar" : "¡Buscar!"}
+          {busqueda.trimEnd().trimStart() == 0 ? "Buscar" : "¡Buscar!"}
         </Link>
       </div>
     </div>

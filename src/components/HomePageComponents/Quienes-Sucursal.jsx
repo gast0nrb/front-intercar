@@ -1,6 +1,5 @@
 import Quienes from './Quienes'
 import QuienesItem from './QuienesItem';
-import Sucursal from './Sucursales'
 
 const QuienesSucursal = () => {
 return (

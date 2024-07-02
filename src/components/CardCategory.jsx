@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 
-const CardCategory = ({isBusqueda}) => {
+const CardCategory = ({isBusqueda , title}) => {
     return(
-        <div className="group md:basis-3/5 lg:basis-3/12 md:grow lg:grow-0 shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
+        <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
             <div className="img-container border-b-2 border-transparent group-hover:border-orange-500 duration-300">
                 <Link to={`/productos`}>
                 <img src="/90008.png" alt="" className="rounded-t-md" />
@@ -10,7 +10,7 @@ const CardCategory = ({isBusqueda}) => {
             </div>
             <div className="data-container text-center group-hover:bg-neutral-800 group-hover:text-neutral-300 duration-300">
                 <div className="font-bold bg-neutral-800 border-b-2 border-transparent group-hover:border-orange-500 duration-300">
-                    <h3 className="text-neutral-300 font-bold group-hover:text-orange-500 duration-300">KIT HEADLIGHT H4 T1 6000K</h3>
+                    <h3 className="text-neutral-300 font-bold group-hover:text-orange-500 duration-300 text-nowrap overflow-hidden text-ellipsis">{title}</h3>
                 </div>
                 <div className="prices text-start p-1">
                     <div className="">
