@@ -7,70 +7,122 @@ const WrapSucursales = (width, height) => {
     {
       id: 0,
       name: "Nataniel cox 1935 (Casa Matriz)",
-      url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.1420925083908!2d-70.65260202374024!3d-33.47165117338104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c53ebeb80f7f%3A0x3aa1b3d04efaf08d!2sNataniel%20Cox%201935%2C%208320000%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1716828704159!5m2!1ses-419!2scl",
-      ciudad: "santiago",
+      url: "https://maps.app.goo.gl/CzHWbL2TwBjq4QRG6",
+      urlWaze:
+        "https://ul.waze.com/ul?place=ChIJfw-4vj7FYpYRjfD6TtCzoTo&ll=-33.47165120%2C-70.65002710&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
+      ciudad: "Santiago",
       comuna: "Santiago centro",
       direccion: "Avenida Nataniel Cox 1935, bodega 4",
+      showBig: false,
     },
     {
       id: 1,
       name: "Diez de julio 413-C",
-      ulr: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.8915806166956!2d-70.64102012526416!3d-33.452131097596585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5719dd05931%3A0x3533420200b04d87!2sDiez%20de%20Julio%20413%2C%208330552%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1716834765389!5m2!1ses!2scl",
-      ciudad: "santiago",
+      url: "https://maps.app.goo.gl/q7XRcGMgx31cKzX18",
+      urlWaze:
+        "https://ul.waze.com/ul?place=ChIJMVnQnXHFYpYRh02wAAJCMzU&ll=-33.45213560%2C-70.63844520&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
+      ciudad: "Santiago",
       comuna: "Santiago centro",
       direccion: "Avenida Diez de Julio 413-c",
+      showBig: false,
     },
     {
       id: 2,
       name: "Diez de julio 554",
-      url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.8508036728076!2d-70.6440618237408!3d-33.45319337338856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c57250098227%3A0xd1549fb717d0a72!2sDiez%20de%20Julio%20554%2C%208330637%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1716829166444!5m2!1ses-419!2scl",
-      ciudad: "santiago",
+      url: "https://maps.app.goo.gl/AFzKrKWFU7AKgk598",
+      urlWaze:
+        "https://ul.waze.com/ul?place=ChIJJ4IJUHLFYpYRcgp9cftJFQ0&ll=-33.45319340%2C-70.64148690&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
+      ciudad: "Santiago",
       comuna: "Santiago centro",
       direccion: "Avenida Diez de Julio 554",
+      showBig: false,
     },
     {
       id: 3,
       name: "Diez de julio 792",
-      url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.8293720867473!2d-70.64882242374091!3d-33.4537516733882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c50d2f993aed%3A0xcad0377cb49f0851!2sDiez%20de%20Julio%20792%2C%208330697%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1716829188777!5m2!1ses-419!2scl",
-      ciudad: "santiago",
+      url: "https://maps.app.goo.gl/RrjqSDBHZrayt5dQ9",
+      urlWaze:
+        "https://ul.waze.com/ul?place=ChIJ7TqZLw3FYpYRUQiftHw30Mo&ll=-33.45375170%2C-70.64624750&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
+      ciudad: "Santiago",
       comuna: "Santiago centro",
       direccion: "Avenida Diez de Julio 792",
+      showBig: false,
     },
     {
       id: 4,
       name: "Estación central",
-      url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.8705487585476!2d-70.67370869999999!3d-33.452679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c4fee7574263%3A0x17a7d97c151a8cfa!2sUni%C3%B3n%20Latinoamericana%20209%2C%208370220%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1716829224352!5m2!1ses-419!2scl",
-      ciudad: "santiago",
-      comuna: "Santiago centro",
+      url: "https://maps.app.goo.gl/w23sYDzoWMa2g53x5",
+      urlWaze:
+        "https://ul.waze.com/ul?place=ChIJY0JX5_7EYpYR-owaFXzZpxc&ll=-33.45267900%2C-70.67370870&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
+      ciudad: "Santiago",
+      comuna: "Estación central",
       direccion: "Avenida Unión Latinoamericana 209",
+      showBig: false,
     },
     {
       id: 5,
       name: "Viña del mar, San antonio 1301",
-      url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.7667528176976!2d-71.54523912375659!3d-33.009924373567216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689ddc49d355bff%3A0xe5aba33cfe27649f!2sSan%20Antonio%201301%2C%202530911%20Vi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1716829248429!5m2!1ses-419!2scl",
+      url: "https://maps.app.goo.gl/7WTZHKr3etFhj6dq5",
+      urlWaze:
+        "https://ul.waze.com/ul?place=ChIJ_1s1ncTdiZYRn2Qn_jyjq-U&ll=-33.00992440%2C-71.54266420&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
       ciudad: "Viña del mar",
       comuna: "Viña del mar",
       direccion: "San antonio 1301",
+      showBig: false,
     },
     {
       id: 6,
       name: "Viña del mar, 14 norte 1172",
-      url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.758721678378!2d-71.54545512375672!3d-33.01013607356692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689ddc362561d3d%3A0xfe039dc18526c291!2s14%20Nte.%201172%2C%20Vi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1716829269581!5m2!1ses-419!2scl",
+      url: "https://maps.app.goo.gl/JUHgPAxHZZuS6C4r9",
+      urlWaze:
+        "https://ul.waze.com/ul?place=ChIJPR1WYsPdiZYRkcImhcGdA_4&ll=-33.01013610%2C-71.54288020&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
       ciudad: "Viña del mar",
       comuna: "Viña del mar",
       direccion: "14 norte 1172",
+      showBig: false,
     },
-
   ];
-  const [currentSucursal, setSucursal] = useState(sucursales[0]);
-  //Component
+
+  const [stateSucursales, setSucursal] = useState(sucursales);
+
+  function showBigOneSucursal(idSucursal) {
+    const arr = [...stateSucursales];
+    arr.map((s) => {
+      if (idSucursal == s.id) {
+        s.showBig = true;
+      } else {
+        s.showBig = false;
+      }
+    });
+    setSucursal(arr);
+  }
+
+  function hideBigOneSucursal() {
+    const arr = [...stateSucursales];
+    arr.map((s) => {
+      s.showBig = false;
+    });
+    setSucursal(arr);
+  }
+
   return (
     <>
       <h2 className="text-center w-fit mx-auto font-extrabold tracking-widest lg:text-4xl md:text-xl mb-10 bg-neutral-800 text-neutral-300 border-x-4 border-orange-500 px-2 py-1 rounded-sm">
         ¿DONDE ESTAMOS?
       </h2>
-      <Sucursales title={"Santiago, Chile."} sucursales={sucursales} EsStgo={true}/> 
-      <Sucursales title={"También estamos en..."} sucursales={sucursales} EsStgo={false}/> 
+      <Sucursales
+        hide={hideBigOneSucursal}
+        showUp={showBigOneSucursal}
+        title={"Santiago, Chile."}
+        sucursales={stateSucursales}
+        EsStgo={true}
+      />
+      <Sucursales
+        showUp={showBigOneSucursal}
+        title={"También estamos en..."}
+        sucursales={stateSucursales}
+        EsStgo={false}
+      />
     </>
   );
 };
