@@ -11,7 +11,7 @@ const Sucursal = ({
   id,
   showUp,
   showBig,
-  hide
+  hide,
 }) => {
   const [focus, setFocus] = useState(false);
 
@@ -50,13 +50,21 @@ const Sucursal = ({
               </div>
               <div className="border-l-2 grow">
                 <div className="">
-                  <a target="_blank" href={`${urlWaze}`} className="flex justify-center gap-0.5 p-0.5 mx-auto hover:scale-110 duration-300">
+                  <a
+                    target="_blank"
+                    href={`${urlWaze}`}
+                    className="flex justify-center gap-0.5 p-0.5 mx-auto hover:scale-110 duration-300"
+                  >
                     <img src="/waze.svg" className="md:w-3 lg:w-4"></img>
                     Waze
                   </a>
                 </div>
                 <div className="border-t-2">
-                  <a target="_blank" href={`${url}`} className="flex p-0.5 gap-0.5 mx-auto hover:scale-110 duration-300 justify-center">
+                  <a
+                    target="_blank"
+                    href={`${url}`}
+                    className="flex p-0.5 gap-0.5 mx-auto hover:scale-110 duration-300 justify-center"
+                  >
                     <img src="/maps.svg" className="md:w-3 lg:w-4"></img>
                     Maps
                   </a>
@@ -64,16 +72,17 @@ const Sucursal = ({
               </div>
             </div>
             <button
+              className="bg-neutral-200 mt-1 p-0.5 text-center rounded-xl"
               onMouseOver={() => setFocus(true)}
               onMouseLeave={() => setFocus(false)}
-              onClick={()=> {
-                  setFocus(false);
-                  hide();
+              onClick={() => {
+                setFocus(false);
+                hide();
               }}
             >
               <img
                 src={`${focus ? "/collapseActive.svg" : "collapse.svg"}`}
-                className="md:w-3 lg:w-4 pt-1"
+                className="md:w-3 lg:w-4"
                 alt=""
               />
             </button>
@@ -82,7 +91,7 @@ const Sucursal = ({
           <button
             onMouseOver={() => setFocus(true)}
             onMouseLeave={() => setFocus(false)}
-            className="mx-auto"
+            className="mx-auto bg-neutral-200 rounded-xl p-0.5"
             onClick={() => {
               setFocus(false);
               showUp(id);

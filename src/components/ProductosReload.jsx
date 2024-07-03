@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ProductosReload = ({title}) => {
+const ProductosReload = ({title, changeContador}) => {
   const [active, setActive] = useState(false);
   return (
     <div className="text-center">
@@ -10,7 +10,8 @@ const ProductosReload = ({title}) => {
           setActive(true);
           setTimeout(() => {
             setActive(false);
-          }, 1000);
+          changeContador()
+          }, 700);
         }}
       >
         {title}

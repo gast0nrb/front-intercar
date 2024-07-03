@@ -1,31 +1,43 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-const CardCategory = ({isBusqueda , title}) => {
-    return(
-        <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
-            <div className="img-container border-b-2 border-transparent group-hover:border-orange-500 duration-300">
-                <Link to={`/productos`}>
-                <img src="/90008.png" alt="" className="rounded-t-md" />
-                </Link>
-            </div>
-            <div className="data-container text-center group-hover:bg-neutral-800 group-hover:text-neutral-300 duration-300">
-                <div className="font-bold bg-neutral-800 border-b-2 border-transparent group-hover:border-orange-500 duration-300">
-                    <h3 className="text-neutral-300 font-bold group-hover:text-orange-500 duration-300 text-nowrap overflow-hidden text-ellipsis">{title}</h3>
-                </div>
-                <div className="prices text-start p-1">
-                    <div className="">
-                        <p><span className="font-bold">Mayorista</span> $8.900</p>
-                    </div>
-                    <div>
-                        <p><span className="font-bold">Detalle</span> $8.900</p>
-                    </div>
-                    <div className={`${isBusqueda ? "text-center" : "hidden"}`}>
-                        <Link to={`/categorias`} className="border-y-2 hover:border-orange-500 duration-300 rounded-sm w-auto text-xs p-1 font-bold">AMPOLLETAS</Link>
-                    </div>
-                </div>
-            </div>
+const CardCategory = ({ isBusqueda, title }) => {
+  return (
+    <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
+      <div className="">
+        <Link to={`/productos`}>
+          <img src="/90008.png" alt="" className="rounded-t-md" />
+        </Link>
+      </div>
+      <div className="data-container text-center group-hover:bg-neutral-800 group-hover:text-neutral-300 duration-300">
+        <div>
+          <p className="text-xs bg-neutral-800 text-neutral-300 group-hover:text-orange-500">SKU:90008</p>
         </div>
-    )
-}
+        <div className="font-bold bg-neutral-800 border-b-2 border-transparent group-hover:border-orange-500 duration-300">
+          <h3 className="text-neutral-300 font-bold md:text-lg lg:text-xl px-1 text-nowrap overflow-hidden text-ellipsis">
+            {title}
+          </h3>
+        </div>
+        <div className="prices p-1 flex">
+          <div className="grow">
+            <p className="font-bold">Mayorista</p>
+            <p>$5900</p>
+          </div>
+          <div className="grow">
+            <p className="font-bold">Detalle</p>
+            <p>$9900</p>
+          </div>
+          <div className={`${isBusqueda ? "text-center" : "hidden"}`}>
+            <Link
+              to={`/categorias`}
+              className="border-y-2 hover:border-orange-500 duration-300 rounded-sm w-auto text-xs p-1 font-bold"
+            >
+              AMPOLLETAS
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default CardCategory
+export default CardCategory;

@@ -8,44 +8,46 @@ const Card = ({
   precioMayorista = "2.590",
   categoria = "AMPOLLETAS",
   url = "/90008.png",
-  hidde = false,
 }) => {
   return (
-    <div
-      className={`text-center my-14 h-max flex justify-center ${
-        hidde ? "hidden" : ""
-      }`}
-    >
-      <div className="group container-img md:w-10/12 lg:w-4/6 text-center hover:bg-neutral-800 pb-3 rounded-sm shadow-md hover:scale-110 duration-500">
+    <div className="text-center my-14 w-11/12 mx-auto group hover:scale-105 rounded-md pb-4 shadow-md duration-300">
+      <div className="rounded-sm">
         <Link to={`/productos`}>
           <img className="rounded-sm w-full" src={url} alt={title} />
         </Link>
-        <h3 className="bg-neutral-800 group-hover:border-orange-500 border-b-2 font-bold text-xl group-hover:text-orange-500 text-neutral-300 ">
-          {title}
-        </h3>
-        <div className="justify-center mx-2 group-hover:text-white">
-          <div className="flex gap-1">
-            <div className="div">
-              <p className="font-bold xl:text-lg text-xs">Detalle</p>
-            </div>
-            <div className="div">
-              <p className="text-xs xl:text-lg">${precioDetalle}</p>
-            </div>
-          </div>
-          <div className="flex gap-1">
-            <p className="font-bold xl:text-lg text-xs">Mayorista </p>
-            <p className="text-xs xl:text-lg">${precioMayorista}</p>
-          </div>
-          <div className="min-w-max mt-2 text-sm my-auto rounded-sm p-1 font-bold">
-            <Link
-              to={`/categorias`}
-              className=" hover:border-0 border-y-2 hover:border-y-2 rounded-sm text-xs duration-300 hover:border-y-orange-500 p-1 w-3/6"
-              href=""
-            >
-              {categoria}
-            </Link>
-          </div>
+      </div>
+      <p className="p-0.5 group-hover:text-orange-500 text-neutral-300 text-xs bg-neutral-800">
+        SKU: {codigo.toUpperCase()}
+      </p>
+      <h3 className="text-nowrap overflow-hidden text-ellipsis px-1 border-orange-500 font-bold border-b-2 md:text-lg lg:text-xl text-neutral-300 bg-neutral-800">
+        {title.toUpperCase()}
+      </h3>
+      <div className="justify-center flex p-1 lg:text-lg md:text-sm">
+        <div className="grow mx-auto text-neutral-800">
+          <p className="font-bold">
+            Mayorista
+          </p>
+          <p>
+            ${precioMayorista}
+          </p>
         </div>
+        <div className="grow text-neutral-800 ">
+          <p className="font-bold">
+            Detalle
+          </p>
+          <p>
+            ${precioDetalle}
+          </p>
+        </div>
+      </div>
+      <div className="min-w-max mt-2 text-sm my-auto rounded-sm p-1 font-bold">
+        <Link
+          to={`/categorias`}
+          className="hover:border-0 border-y-2 hover:border-y-2 text-xs duration-300 hover:border-y-orange-500 p-1"
+          href=""
+        >
+          {categoria.toUpperCase()}
+        </Link>
       </div>
     </div>
   );
