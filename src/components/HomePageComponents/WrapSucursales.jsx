@@ -118,6 +118,7 @@ const WrapSucursales = (width, height) => {
         EsStgo={true}
       />
       <Sucursales
+      hide={hideBigOneSucursal}
         showUp={showBigOneSucursal}
         title={"También estamos en..."}
         sucursales={stateSucursales}

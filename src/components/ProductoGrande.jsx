@@ -14,24 +14,26 @@ const ProductoGrande = () => {
 
   return (
     <div className="md:w-11/12 mx-auto lg:w-full lg:flex md:flex-row mb-20 pt-12 py-3">
-      <div className="cointaer-foto xl:w-5/12 lg:w-6/12 md:w-11/12 lg:mb-0 shadow-lg rounded-md md:mx-auto lg:mx-6 h-auto">
-      <p className=" rounded-t-sm text-orange-500 text-xs font-bold bg-neutral-800 lg:rounded-sm p-1">
-        SKU: 90008
-      </p>
-        <img src="90008.png" alt="" className="w-full lg:rounded-b-sm h-full" />
+      <div className="cointaer-foto xl:w-5/12 lg:w-6/12 md:w-11/12 lg:mb-0 shadow-lg rounded-md md:mx-auto lg:mx-6">
+        <p className=" rounded-t-sm text-orange-500 text-xs font-bold bg-neutral-800 lg:rounded-sm p-1">
+          SKU: 90008
+        </p>
+        <img
+          src="90008.png"
+          alt=""
+          className=" w-full h-full lg:rounded-b-sm"
+        />
       </div>
       <div className="md:w-11/12 lg:w-2/5 md:flex-row lg:flex shadow-lg rounded-md md:mx-auto lg:mx-0 group">
         <div className="descripcion text-center group-hover:bg-neutral-800 duration-300">
           <h2 className=" text-center group-hover:text-orange-500 duration-300 border-b-2 group-hover:border-orange-500 bg-neutral-800 rounded-sm text-neutral-300 font-bold md:text-xl lg:text-xl xl:text-3xl">
             KIT HEADLIGHT T1 H4 12/24 VOLT 6 MESES DE GARANTÍA
           </h2>
-          <p className="md:text-sm lg:text-xl group-hover:text-neutral-300 duration-300 overflow-scroll">
-            Ampolleta tipo led 5050, multivoltaje 12/24 volt, luz fría 6000
-            kelvin, incluy
-                  Ampolleta tipo led 5050, multivoltaje 12/24 volt, luz fría 6000
-            kelvin, incluye 3 meses de garantía.      mdmdAmpolleta tipo led 5050, multivoltaje 12/24 volt, luz fría 6000
-            kelvin, incluye 3 meses de garantía.      mdmdAmpolleta tipo led 5050, multivoltaje 12/24 volt, luz fría 6000
-            kelvin, incluye 3 meses de garantía aaaaa.
+          <p className="md:text-sm lg:text-xl px-2 group-hover:text-neutral-300 duration-300 overflow-y-scroll">
+            fría 6000 kelvin, incluye 3 meses de garantía. mdmdAmpolleta tipo
+            led 5050, multivoltaje 12/24 volt, luz fría 6000 kelvin, incluye 3
+            meses de garantía. mdmdAmpolleta tipo led 5050, multivoltaje 12/24
+            volt, luz fría 6000 kelvin, incluye 3 meses de garantía aaaaa.
           </p>
         </div>
         <div className="prices group-hover:bg-neutral-800 duration-300 border-2 border-neutral-200 text-center rounded-br-md rounded-tr-md">
