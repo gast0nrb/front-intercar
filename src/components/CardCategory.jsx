@@ -8,7 +8,7 @@ const CardCategory = ({ isBusqueda, title }) => {
           <img src="/90008.png" alt="" className="rounded-t-md" />
         </Link>
       </div>
-      <div className="data-container text-center group-hover:bg-neutral-800 group-hover:text-neutral-300 duration-300">
+      <div className="data-container text-center group-hover:bg-neutral-800 group-hover:text-neutral-300 duration-300 pb-2">
         <div>
           <p className="text-xs bg-neutral-800 text-neutral-300 group-hover:text-orange-500">SKU:90008</p>
         </div>
@@ -17,7 +17,7 @@ const CardCategory = ({ isBusqueda, title }) => {
             {title}
           </h3>
         </div>
-        <div className="prices p-1 flex">
+        <div className="prices px-1 flex">
           <div className="grow">
             <p className="font-bold">Mayorista</p>
             <p>$5900</p>
@@ -26,6 +26,7 @@ const CardCategory = ({ isBusqueda, title }) => {
             <p className="font-bold">Detalle</p>
             <p>$9900</p>
           </div>
+        </div>
           <div className={`${isBusqueda ? "text-center" : "hidden"}`}>
             <Link
               to={`/categorias`}
@@ -34,7 +35,6 @@ const CardCategory = ({ isBusqueda, title }) => {
               AMPOLLETAS
             </Link>
           </div>
-        </div>
       </div>
     </div>
   );

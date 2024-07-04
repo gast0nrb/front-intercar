@@ -83,20 +83,20 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
   const [val2, setVal2] = useState(contador + 2);
 
   function changeContador() {
-    if (Productos.length-1 >= val2) {
+    if (val2 + 1 > Productos.length -1 ) {
       setVal2(0);
+    }else {
+      setVal2(val2 + 1)
     }
-    if (Productos.length-1 >= val1) {
+    if (val1 + 1 > Productos.length -1) {
       setVal1(0);
+    }else {
+      setVal1(val1 +1)
     }
-    if (Productos.length-1 >= contador) {
+    if (contador + 1 > Productos.length -1 ) {
       setContador(0);
     } else {
-      setContador(contador + 1);
-      setVal1(val1 + 1);
-      setVal2(val2 + 1);
-      console.log("paso todos los if", contador, val1, val2)
-      console.log(Productos.length)
+      setContador(contador + 1)
     }
   }
   return (

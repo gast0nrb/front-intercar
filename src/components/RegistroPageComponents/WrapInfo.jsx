@@ -6,7 +6,17 @@ import Direccion from "./Direccion";
 import Contact from "./Contact";
 
 const WrapInfo = () => {
-  const obj = {};
+  const obj = {
+    nombre : "",
+    razonSocial  : "",
+    rut : "",
+    giro : "",
+    ciudad : "",
+    comuna : "",
+    direccion : "",
+    telefono : "",
+    correo : ""
+  };
   const [registroObj, setRegistroObj] = useState();
   return (
     <section className="mx-auto shadow-md w-11/12 rounded-md text-center pb-4 mb-4 font-bold text-neutral-800 lg:text-xl md:text-xs">
