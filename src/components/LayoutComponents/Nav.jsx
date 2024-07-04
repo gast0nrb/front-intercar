@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
     <NavContext.Provider value={{ setShowUp, showUp, changeShowUp }}>
-      <nav className="min-w-min  bg-neutral-800 text-gray-400 text-center">
+      <nav className="min-w-min  bg-black text-gray-400 text-center">
         <div className="flex justify-center lg:hidden w-full md:text-sm lg:text-xl pt-1">
           <div className="">
             <img
