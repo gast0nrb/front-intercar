@@ -9,7 +9,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "Ampolleta 2 contactos 12v 21/5w.",
       precioDetalle: 700,
       precioMayorista: 155,
-      categoria: "AMPOLLETAS",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -17,7 +20,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "Ampolleta 2 contactos 24v 21/5w.",
       precioDetalle: 1100,
       precioMayorista: 600,
-      categoria: "AMPOLLETAS",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -25,7 +31,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "kid headlight h4 12/24 volt, 6000k.",
       precioDetalle: 23500,
       precioMayorista: 18500,
-      categoria: "LED",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -33,7 +42,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "Inmovilizador 12v",
       precioDetalle: 1100,
       precioMayorista: 600,
-      categoria: "SEGURIDAD",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -41,7 +53,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "GPS 3g auto 12v.",
       precioDetalle: 1100,
       precioMayorista: 600,
-      categoria: "SEGURIDAD",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -49,7 +64,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "TRABAVOLANTE REFORZADO.",
       precioDetalle: 1100,
       precioMayorista: 600,
-      categoria: "TRABAVOLANTES",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -57,7 +75,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "Farol 6 led 12/24 volt.",
       precioDetalle: 1100,
       precioMayorista: 600,
-      categoria: "LED",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -65,7 +86,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "Farol redondo 6 led.",
       precioDetalle: 1100,
       precioMayorista: 600,
-      categoria: "led",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
     {
@@ -73,7 +97,10 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       title: "Barra led 12/24 volt 123 led.",
       precioDetalle: 1100,
       precioMayorista: 600,
-      categoria: "led",
+      categoria: {
+        id : 1, 
+        nombre : "AMPOLLETAS"
+      } ,
       url: "/90008.png",
     },
   ];

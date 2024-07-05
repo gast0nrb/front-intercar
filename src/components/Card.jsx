@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 const Card = ({
-  codigo = 100002,
-  title = "AMPOLLETA HEADLIGHT H4 T1 12/24 VOLT",
-  descripcion = "Descripción por default uso para pruebas de desarrollo y ux",
-  precioDetalle = "5.900",
-  precioMayorista = "2.590",
-  categoria = "AMPOLLETAS",
-  url = "/90008.png",
+  codigo,
+  title,
+  descripcion,
+  precioDetalle,
+  precioMayorista,
+  categoria,
+  url 
 }) => {
   return (
     <div className="text-center my-14 w-11/12 mx-auto group hover:scale-105 rounded-md pb-4 shadow-md duration-300 hover:bg-neutral-800">
@@ -34,11 +34,11 @@ const Card = ({
       </div>
       <div className="min-w-max mt-2 text-sm my-auto rounded-sm p-1 font-bold">
         <Link
-          to={`/categorias`}
+          to={`/categorias/${categoria.id}`}
           className="hover:border-0 border-y-2 hover:border-y-2 group-hover:text-neutral-300 text-xs duration-300 hover:border-y-orange-500 p-1"
           href=""
         >
-          Ver más {categoria.toLowerCase()}
+          Ver más {categoria.nombre.toLowerCase()}
         </Link>
       </div>
     </div>

@@ -3,6 +3,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
+  ScrollRestoration,
 } from "react-router-dom";
 
 import MainLayout from "./layouts/MainLayout";
@@ -14,9 +15,8 @@ import LoginPage from "./pages/LoginPage";
 import RegistroPage from "./pages/RegistroPage";
 import MessageInfo from "./pages/MessageInfo";
 import OlvidePage from "./pages/OlvidePage";
-import CarritoPage from "./pages/CarritoPage"
+import CarritoPage from "./pages/CarritoPage";
 import ListadoCarroPage from "./pages/ListadoCarroPage";
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,9 +32,7 @@ const router = createBrowserRouter(
         element={
           <MessageInfo
             infoUser={"gastón rojas"}
-            title={
-              "Te has registrado correctamente."
-            }
+            title={"Te has registrado correctamente."}
           />
         }
       />
@@ -44,9 +42,7 @@ const router = createBrowserRouter(
         element={
           <MessageInfo
             infoUser={"grojas@intercarchile.cl"}
-            title={
-              "Te enviaremos un correo para recuperar tu cuenta."
-            }
+            title={"Te enviaremos un correo para recuperar tu cuenta."}
           />
         }
       />
@@ -55,19 +51,26 @@ const router = createBrowserRouter(
         element={
           <MessageInfo
             infoUser={"Gastón Rojas"}
-            title={
-              "En breves momentos tu cotización será revisada."
-            }
+            title={"En breves momentos tu cotización será revisada."}
             msjLargo="¡Estamos trabajando para ti!"
           />
         }
       />
-      
-      <Route path="/carro/:id/:check" element={<CarritoPage title={"Tu carrito número 150"} btn1={"Agotados"} btn2={"Con stock"}/>} />
-      <Route path="/listadocarro" element={<ListadoCarroPage/>} />
+
+      <Route
+        path="/carro/:id/:check"
+        element={
+          <CarritoPage
+            title={"Tu carrito número 150"}
+            btn1={"Agotados"}
+            btn2={"Con stock"}
+          />
+        }
+      />
+      <Route path="/listadocarro" element={<ListadoCarroPage />} />
     </Route>
   )
-  //Check prop le dice al carro si es que este fue revisado o ya no. 
+  //Check prop le dice al carro si es que este fue revisado o ya no.
   //Eso conlleva a un sinfin de despliegues hacia los demaś componentes
 );
 
