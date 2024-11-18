@@ -17,7 +17,7 @@ const WrapInfo = () => {
     telefono : "",
     correo : ""
   };
-  const [registroObj, setRegistroObj] = useState();
+  const [registroObj, setRegistroObj] = useState(obj);
   return (
     <section className="mx-auto shadow-md w-11/12 rounded-md text-center pb-4 mb-4 font-bold text-neutral-800 lg:text-xl md:text-xs">
       <h2 className="text-left bg-neutral-800 rounded-sm text-orange-500 pl-2">

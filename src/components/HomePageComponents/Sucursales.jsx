@@ -1,6 +1,6 @@
 import Sucursal from "./Sucursal";
 
-const Sucursales = ({ title, sucursales, EsStgo = true, showUp , hide}) => {
+const Sucursales = ({ title, sucursales, showUp, hide }) => {
   return (
     <>
       <h3
@@ -10,17 +10,21 @@ const Sucursales = ({ title, sucursales, EsStgo = true, showUp , hide}) => {
         {title}
       </h3>
       <div className="mb-5 w-11/12 mx-auto gap-2 grid lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2">
-        {sucursales
-          .filter((s) => {
-            if (EsStgo) {
-              return s.ciudad.toLowerCase() == "santiago";
-            } else {
-              return s.ciudad.toLowerCase() != "santiago";
-            }
-          })
-          .map((s) => (
-            <Sucursal hide={hide} url={s.url} urlWaze={s.urlWaze} ciudad={s.ciudad} comuna={s.comuna} showUp={showUp} id={s.id} nombre={s.name} showBig={s.showBig}  direccion={s.direccion} />
-          ))}
+        {sucursales.map((s) => (
+          <Sucursal
+            showUp={showUp}
+            hide={hide}
+            ciudad={s.COMUNA.CIUDAD.nombre}
+            comuna={s.COMUNA.nombre}
+            direccion={s.direccion}
+            nombre={s.nombre}
+            url={s.urlMaps}
+            urlWaze={s.urlWaze}
+            id={s.id}
+            key={s.id}
+            showBig={s.showBig}
+          />
+        ))}
       </div>
     </>
   );

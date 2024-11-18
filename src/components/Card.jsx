@@ -6,8 +6,9 @@ const Card = ({
   descripcion,
   precioDetalle,
   precioMayorista,
-  categoria,
-  url 
+  nombre_categoria,
+  id_categoria,
+  url,
 }) => {
   return (
     <div className="text-center my-14 w-11/12 mx-auto group hover:scale-105 rounded-md pb-4 shadow-md duration-300 hover:bg-neutral-800">
@@ -23,22 +24,18 @@ const Card = ({
         {title.toUpperCase()}
       </h3>
       <div className="justify-center flex p-1 lg:text-lg md:text-sm">
-        <div className="grow mx-auto text-neutral-800 group-hover:text-neutral-300">
-          <p className="font-bold">Mayorista</p>
-          <p>${precioMayorista}</p>
-        </div>
         <div className="grow text-neutral-800 group-hover:text-neutral-300">
-          <p className="font-bold">Detalle</p>
+          <p className="font-bold">Precio detalle</p>
           <p>${precioDetalle}</p>
         </div>
       </div>
       <div className="min-w-max mt-2 text-sm my-auto rounded-sm p-1 font-bold">
         <Link
-          to={`/categorias/${categoria.id}`}
+          to={`/categorias/${id_categoria}`}
           className="hover:border-0 border-y-2 hover:border-y-2 group-hover:text-neutral-300 text-xs duration-300 hover:border-y-orange-500 p-1"
           href=""
         >
-          Ver más {categoria.nombre.toLowerCase()}
+          Ver más {nombre_categoria.toLowerCase()}
         </Link>
       </div>
     </div>

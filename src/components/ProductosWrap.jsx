@@ -1,41 +1,44 @@
+import { useState } from "react";
 import Card from "./Card";
 
-const ProductosWrap = ({ contador, val1, val2, Productos }) => {
+const ProductosWrap = ({ val1, val2, Productos }) => {
+  const [precios, setPrecios] = useState();
   return (
     <div className="w-11/12 mx-auto grid gap-3 md:grid-cols-1 lg:grid-cols-3">
-        <div>
+      <div>
         <Card
-          categoria={Productos[contador].categoria}
-          codigo={Productos[contador].codigo}
-          descripcion={Productos[contador]}
-          precioDetalle={Productos[contador].precioDetalle}
-          precioMayorista={Productos[contador].precioMayorista}
-          title={Productos[contador].title}
-          url={Productos[contador].url}
+          id_categoria={Productos.data[0].id_categoria}
+          nombre_categoria={Productos.data[0].Nombre_categoria}
+          codigo={Productos.data[0].fk_producto}
+          descripcion={Productos.data[0]}
+          precioDetalle={Productos.data[0].monto}
+          precioMayorista={0}
+          title={Productos.data[0].titulo}
+          url={Productos.data[0].file}
         />
-        </div>
-        <div className="md:hidden lg:block">
+      </div>
+      <div className="md:hidden lg:block">
         <Card
-          categoria={Productos[val1].categoria}
-          codigo={Productos[val1].codigo}
-          descripcion={Productos[val1]}
-          precioDetalle={Productos[val1].precioDetalle}
-          precioMayorista={Productos[val1].precioMayorista}
-          title={Productos[val1].title}
-          url={Productos[val1].url}
+          id_categoria={Productos.data[1].id_categoria}
+          nombre_categoria={Productos.data[1].Nombre_categoria}
+          codigo={Productos.data[1].fk_producto}
+          descripcion={Productos.data[1]}
+          precioDetalle={Productos.data[1].monto}
+          title={Productos.data[1].titulo}
+          url={Productos.data[1].file}
         />
-        </div>
-        <div className="md:hidden lg:block">
+      </div>
+      <div className="md:hidden lg:block">
         <Card
-          categoria={Productos[val2].categoria}
-          codigo={Productos[val2].codigo}
-          descripcion={Productos[val2]}
-          precioDetalle={Productos[val2].precioDetalle}
-          precioMayorista={Productos[val2].precioMayorista}
-          title={Productos[val2].title}
-          url={Productos[val2].url}
+          id_categoria={Productos.data[2].id_categoria}
+          nombre_categoria={Productos.data[2].Nombre_categoria}
+          codigo={Productos.data[2].fk_producto}
+          descripcion={Productos.data[2]}
+          precioDetalle={Productos.data[2].monto}
+          title={Productos.data[2].titulo}
+          url={Productos.data[2].file}
         />
-        </div>
+      </div>
     </div>
   );
 };
