@@ -4,9 +4,9 @@ const CardCategory = ({
   isBusqueda,
   title,
   codigo,
-  precioMayorista,
   precioDetalle,
-  url
+  url,
+  categoria,
 }) => {
   return (
     <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
@@ -28,20 +28,16 @@ const CardCategory = ({
         </div>
         <div className="prices px-1 flex">
           <div className="grow">
-            <p className="font-bold">Mayorista</p>
-            <p>${precioMayorista}</p>
-          </div>
-          <div className="grow">
             <p className="font-bold">Detalle</p>
             <p>${precioDetalle}</p>
           </div>
         </div>
         <div className={`${isBusqueda ? "text-center" : "hidden"}`}>
           <Link
-            to={`/categorias`}
+            to={`/categorias/${categoria.id}`}
             className="border-y-2 hover:border-orange-500 duration-300 rounded-sm w-auto text-xs p-1 font-bold"
           >
-            Ver más ampolletas
+            Ver más {categoria.nombre.toLowerCase()}
           </Link>
         </div>
       </div>
