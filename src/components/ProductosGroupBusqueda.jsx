@@ -15,7 +15,7 @@ const ProductosGroup = ({ productos }) => {
             }
             title={producto.titulo}
             codigo={producto.codigo}
-            url={producto.url}
+            url={producto.file}
             key={producto.codigo}
             categoria={producto.CATEGORIum}
           />

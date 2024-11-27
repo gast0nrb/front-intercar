@@ -3,15 +3,34 @@ import SelectCategoria from "./SelectCategoria";
 import SelectOrder from "./SelectOrder";
 import Pagination from "../Pagination";
 import Vacio from "../Vacio";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const CategoriaFull = ({
-  idParams,
   setCurrentCategoria,
   currentCategoria,
   Categorias,
 }) => {
-  const [existen, setExisten] = useState(true); //Determina si hay elementos en el array de la categoría, sino despliega que no hay productos
+  
+  //Estados y parametros
+  const { idParams } = useParams();
+  const [existen, setExisten] = useState(false); //Determina si hay elementos en el array de la categoría, sino despliega que no hay productos
+  const [productos, setProductos] = useState([]);
+
+
+  useEffect(()=> {
+    async function getProductos () {
+      const fetchProductos = await fetch(`http://localhost:8000/api/v0.5/webintercar/productos?categoria=${idParams}`)
+      const jsonProductos = await fetchProductos.json()
+      console.log(jsonProductos)
+      /**
+       * Terminar de consumir los productos y entregarlos a ProductosGroup.
+       * Una vez entregados mapear cada uno de ellos.
+       * 
+       */
+    }
+    getProductos()
+  }, [existen])
 
   return (
     <>

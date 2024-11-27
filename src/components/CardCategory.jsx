@@ -6,7 +6,7 @@ const CardCategory = ({
   codigo,
   precioDetalle,
   url,
-  categoria,
+  categoria
 }) => {
   return (
     <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">

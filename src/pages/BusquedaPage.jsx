@@ -63,7 +63,7 @@ const BusquedaPage = ({ title }) => {
         <>
           <Vacio
             msjPequeño={"No hemos encontrado resultado para tu busqueda."}
-            msjGrande={"Lo sentimos :("}
+            msjGrande={`Aún no existen resultados para: ${name}`}
           />
         </>
       )}
