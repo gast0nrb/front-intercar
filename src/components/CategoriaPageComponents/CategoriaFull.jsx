@@ -22,7 +22,14 @@ const CategoriaFull = ({
     async function getProductos () {
       const fetchProductos = await fetch(`http://localhost:8000/api/v0.5/webintercar/productos?categoria=${idParams}`)
       const jsonProductos = await fetchProductos.json()
-      console.log(jsonProductos)
+      
+      if(jsonProductos.data.length == 0) {
+        setExisten(false)
+        return
+      }
+
+      setProductos([...jsonProductos.data])
+      setExisten(true)
       /**
        * Terminar de consumir los productos y entregarlos a ProductosGroup.
        * Una vez entregados mapear cada uno de ellos.
@@ -46,6 +53,7 @@ const CategoriaFull = ({
             setExisten={setExisten}
             currentCategoria={currentCategoria}
             isBusqueda={false}
+            productosFetch={productos}
           />
           <Pagination pages={25} />
         </>
@@ -55,11 +63,6 @@ const CategoriaFull = ({
             currentCategoria={currentCategoria}
             setCurrentCategoria={setCurrentCategoria}
             Categorias={Categorias}
-          />
-          <ProductosGroup
-            setExisten={setExisten}
-            isBusqueda={false}
-            currentCategoria={currentCategoria}
           />
           <Vacio
             msjPequeño={"No hemos encontrado resultados para esta categoría."}

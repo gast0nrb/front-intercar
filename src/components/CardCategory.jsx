@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const CardCategory = ({
-  isBusqueda,
   title,
   codigo,
   precioDetalle,
@@ -32,7 +31,7 @@ const CardCategory = ({
             <p>${precioDetalle}</p>
           </div>
         </div>
-        <div className={`${isBusqueda ? "text-center" : "hidden"}`}>
+        <div className={"text-center"}>
           <Link
             to={`/categorias/${categoria.id}`}
             className="border-y-2 hover:border-orange-500 duration-300 rounded-sm w-auto text-xs p-1 font-bold"
