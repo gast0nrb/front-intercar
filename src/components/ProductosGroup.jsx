@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import CardCategory from "./CardCategory";
 
 //Pasar un array en props para desplegar la info de cada producto
-const ProductosGroup = ({ setExisten, currentCategoria, productosFetch }) => {
+const ProductosGroup = ({productosFetch, currentCategoria}) => {
   return (
     <>
       <div className="grid md:grid-cols-1 lg:grid-cols-3 mx-auto w-11/12">
@@ -13,7 +12,7 @@ const ProductosGroup = ({ setExisten, currentCategoria, productosFetch }) => {
             codigo={p.codigo}
             url={p.file}
             key={p.codigo}
-            categoria={p.CATEGORIum}
+            currentCategoria={currentCategoria}
           />
         ))}
       </div>

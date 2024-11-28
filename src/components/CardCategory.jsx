@@ -5,7 +5,7 @@ const CardCategory = ({
   codigo,
   precioDetalle,
   url,
-  categoria
+  currentCategoria
 }) => {
   return (
     <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
@@ -33,10 +33,10 @@ const CardCategory = ({
         </div>
         <div className={"text-center"}>
           <Link
-            to={`/categorias/${categoria.id}`}
+            to={`/categorias/${currentCategoria.id}`}
             className="border-y-2 hover:border-orange-500 duration-300 rounded-sm w-auto text-xs p-1 font-bold"
           >
-            Ver más {categoria.nombre.toLowerCase()}
+            Ver más {currentCategoria.nombre.toLowerCase()}
           </Link>
         </div>
       </div>

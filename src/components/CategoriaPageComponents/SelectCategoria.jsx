@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SelectCategoria = ({
   Categorias,
   currentCategoria,
   setCurrentCategoria,
+  setHayProductos
 }) => {
   const navigate = useNavigate();
   return (
@@ -13,11 +13,12 @@ const SelectCategoria = ({
         <p className="font-bold text-xl text-neutral-800">CATEGORIAS</p>
         <select
           onChange={(e) => {
-            setCurrentCategoria(e.target.value);
+            setCurrentCategoria({ id: e.target.value });
             navigate("/categorias/" + e.target.value);
+            setHayProductos(false)
           }}
           id=""
-          value={currentCategoria}
+          value={currentCategoria.id}
           className="shadow-md border-2 focus:text-orange-500 duration-300 text-neutral-800 text-center md:text-xs lg:text-md rounded-sm lg:w-1/5 md:w-1/2 p-1"
           key={1}
         >
