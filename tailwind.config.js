@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       backgroundImage : {
-        'test' : "url('/test.png')"
+        'cuadrados' : "url('/cuadrados.png')"
       }
     },
   },

@@ -29,12 +29,11 @@ const ProductosGroup = ({ categoriaActual }) => {
           Productos: jsonProductos.data.Productos,
         },
       });
-      console.log(productos);
       setCargandoProductos(false);
       setCategoriaInexistente(false);
     }
     getProductos();
-  }, []);
+  }, [categoriaActual]);
   return (
     <>
       {categoriaInexistente ? (

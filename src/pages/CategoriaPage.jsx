@@ -9,16 +9,22 @@ import SelectCategoria from "../components/CategoriaPageComponents/SelectCategor
 const CategoriaPage = ()=> {
   const {idParams} = useParams()
   const [categoriaActual, setCategoriaActual] = useState(idParams)
+  const [cambiarCategoria, setCambiarCategoria] =useState(false)
 
   return (
     <>
      <SelectCategoria
       categoriaActual={categoriaActual}
       setCategoriaActual={setCategoriaActual}
+      cambiarCategoria={cambiarCategoria}
+      setCambiarCategoria={setCambiarCategoria}
      /> 
+     <SelectOrder/>
      <ProductosGroup
       categoriaActual={categoriaActual} 
+      cambiarCategoria={cambiarCategoria}
      />
+    <Pagination/>
     </>
   )
 }
