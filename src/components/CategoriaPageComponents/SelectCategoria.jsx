@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const SelectCategoria = ({ categoriaActual, setCategoriaActual }) => {
   const [cargandoCategorias, setCargandoCategorias] = useState(true);
-  const [categorias, setCategorias] = useState([]);
+  const [categorias, setCategorias] = useState([{id: 0, nombre : "--   Seleccionar   --"}]);
 
   async function getCategorias() {
     if (cargandoCategorias == false) {
@@ -14,7 +14,7 @@ const SelectCategoria = ({ categoriaActual, setCategoriaActual }) => {
     );
     const jsonCategorias = await fetchCategorias.json();
 
-    setCategorias([...jsonCategorias.data]);
+    setCategorias([...categorias,...jsonCategorias.data]);
     setCargandoCategorias(false);
   }
 
@@ -29,17 +29,18 @@ const SelectCategoria = ({ categoriaActual, setCategoriaActual }) => {
       <div className="ml-2 w-11/12 lg:ml-8 gap-2 my-4 font-bold">
         <p className="font-bold text-xl text-neutral-800">CATEGORIAS</p>
         <select
-          value={categorias[categoriaActual]}
           onChange={(e) => {
             setCategoriaActual(e.target.value);
             navigate("/categorias/" + e.target.value);
           }}
-          id=""
           className="shadow-md border-2 focus:text-orange-500 duration-300 text-neutral-800 text-center md:text-xs lg:text-md rounded-sm lg:w-1/5 md:w-1/2 p-1"
           key={1}
+          value={categoriaActual}
         >
           {categorias.map((a) => (
-            <option value={a.id} key={a.id}>
+            <option value={a.id} key={a.id}
+            disabled={ categoriaActual == a.id ? true : false } 
+            >
               {a.nombre.toUpperCase()}
             </option>
           ))}
