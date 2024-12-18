@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CategoriasNav from "./CategoriasNav";
-import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
 import { NavContext } from "../../context/NavContext";
 
@@ -55,20 +54,6 @@ const Nav = () => {
             srcInactive="/casa.svg"
           />
           <NavItem changeShowUp={changeShowUp} />
-          <NavItem
-            changeShowUp={changeShowUp}
-            ListName="SOY CLIENTE"
-            route="/login"
-            srcActive="/userActive.svg"
-            srcInactive="/user.svg"
-          />
-          <NavItem
-            changeShowUp={changeShowUp}
-            ListName="MIS CARROS"
-            route="/listadocarro"
-            srcActive="/carrosActive.svg"
-            srcInactive="/carros.svg"
-          />
           <CategoriasNav />
         </ul>
       </nav>

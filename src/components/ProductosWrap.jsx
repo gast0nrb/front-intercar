@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "./Card";
 
-const ProductosWrap = ({ val1, val2, Productos }) => {
+const ProductosWrap = ({ val1, val2, Productos, setCurrentCodigo }) => {
   const [precios, setPrecios] = useState();
   return (
     <div className="w-11/12 mx-auto grid gap-3 md:grid-cols-1 lg:grid-cols-3">

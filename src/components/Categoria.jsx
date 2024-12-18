@@ -10,7 +10,7 @@ const Categoria = ({ categoria }) => {
           className="text-orange-500 hover:bg-neutral-800 duration-300 rounded-md p-1"
         >
           {" "}
-          {categoria.nombre}
+          {categoria.nombre.toUpperCase()}
         </Link>
       </h2>
     </div>

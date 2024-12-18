@@ -18,13 +18,12 @@ const BusquedaPage = ({ title }) => {
       //Válida si existen productos en la información proveniente de la base de datos.
       //Sino existen datos se despliega que no se encontraron resultados.
       const productosOrder = [...json.data];
-      productosOrder
-        .map((v) => {
-          v.categoria = {
-            id: v.id_categoria,
-            nombre: v.Nombre_categoria,
-          };
-        });
+      productosOrder.map((v) => {
+        v.categoria = {
+          id: v.id_categoria,
+          nombre: v.Nombre_categoria,
+        };
+      });
       setProductos([...productosOrder]);
       if (productosOrder.length == 0) {
         setExisten(false);

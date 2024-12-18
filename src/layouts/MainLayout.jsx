@@ -10,7 +10,6 @@ const MainLayout = () => {
     <>
       <Header />
       <Busqueda />
-      <BurbujaCarro/>
       <Outlet />
       <Footer/>
     </>

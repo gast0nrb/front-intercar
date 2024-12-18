@@ -10,7 +10,7 @@ const CardCategory = ({
   return (
     <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
       <div className="">
-        <Link to={`/productos`}>
+        <Link to={`/producto/${codigo}`}>
           <img src={`${url}`} alt="" className="rounded-t-md" />
         </Link>
       </div>

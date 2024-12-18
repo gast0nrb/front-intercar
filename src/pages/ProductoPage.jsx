@@ -1,25 +1,49 @@
 import ProductoGrande from "../components/ProductoGrande";
-import Productos from "../components/Productos";
+import ProductosSimilares from "../components/ProductosSimilares";
 import Categoria from "../components/Categoria";
+import Vacio from "../components/Vacio";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const ProductoPage = () => {
-  const Producto = {
-    codigo: 90008,
-    title: "KIT HEADLIGHT H4 T1 12/24 VOlt",
-    categoria: {
-      id: 1,
-      nombre: "LED",
-    },
-    precio: 15900,
-    mayor: 9900,
-    descripcion:
-      "fría 6000 kelvin, incluye 3 meses de garantía. mdmdAmpolleta tipo led 5050, multivoltaje 12/24 volt, luz fría 6000 kelvin, incluye 3 meses de garantía. mdmdAmpolleta tipo led 5050, multivoltaje 12/24 volt, luz fría 6000 kelvin, incluye 3 meses de garantía aaaaa.",
+  const { codigo } = useParams();
+
+  const [producto, setProducto] = useState({});
+  const [currentCodigo, setCurrentCodigo] = useState(codigo)
+  const [noExiste, setNoExiste] = useState(true);
+
+  const getProducto = async () => {
+    const productoFetch = await fetch(
+      `http://localhost:8000/api/v0.5/webintercar/productos/${codigo}`
+    );
+    const jsonProducto = await productoFetch.json();
+
+    if (jsonProducto.success == false) {
+      setNoExiste(true);
+      return;
+    }
+
+    setProducto(jsonProducto.data.producto);
+    setNoExiste(false);
   };
+
+  useEffect(() => {
+    getProducto();
+  }, [currentCodigo]);
   return (
     <>
-      <Categoria categoria={Producto.categoria} />
-      <ProductoGrande Producto={Producto} />
-      <Productos title="PRODUCTOS SIMILARES" reloadName={"Cargar más"} />
+      {noExiste ? (
+        <Vacio
+          msjGrande={`No existe un producto con el código: ${codigo} `}
+          msjPequeño={"Prueba con otro código :D!"}
+        />
+      ) : (
+        <>
+          <Categoria categoria={producto.CATEGORIum} />
+          <ProductoGrande producto={producto} />
+          <ProductosSimilares title="PRODUCTOS SIMILARES" setCurrentCodigo={setCurrentCodigo} idCategoria={producto.CATEGORIum.id} reloadName={"Cargar más"} />
+        </>
+      )}
     </>
   );
 };
