@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const NavItem = ({
   srcActive = "/moneyActive.svg",
   srcInactive = "/money.svg",
-  ListName = "OFERTA/LIQUIDACIÓN",
-  route = "/busqueda/oferta",
+  ListName = "OFERTAS",
+  route = "/ofertas",
   changeShowUp,
 }) => {
   const [focus, setFocus] = useState(false);

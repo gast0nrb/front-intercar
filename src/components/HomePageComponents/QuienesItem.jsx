@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 const QuienesItem = ({
   busqueda,
   title = "DEFAULT TITLE",
-  srcImgActive,
-  srcImgInactive,
   text = "DEFAULT TEXT DEFAULT DEFAULT DEFAULT DEFAULT DEFAULT DEFAULT",
   textButton = "Ver",
   isLink = true,
@@ -17,7 +15,7 @@ const QuienesItem = ({
       <p className="p-1 text-neutral-700 text-xs">{text}</p>
       {isLink ? (
         <Link
-          to={`/busqueda/${busqueda}`}
+          to={`/${busqueda}`}
           className="mt-auto mx-auto w-10/12 m-1 hover:border-orange-500 duration-300 font-semibold text-xs hover:text-orange-500 text-neutral-500  border-neutral-300 border-2 rounded-sm px-2"
         >
           {textButton}

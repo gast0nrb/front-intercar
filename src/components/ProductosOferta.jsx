@@ -8,16 +8,12 @@ const ProductosGroup = ({ productos }) => {
         {productos.map((producto) => (
           <CardOferta
             isBusqueda={true}
-            precioDetalle={
-              producto.ListaProductos.filter(
-                (lp) => lp.ListaPrecio.nombre == "Detalle"
-              )[0].monto
-            }
             title={producto.titulo}
-            codigo={producto.codigo}
+            codigo={producto.fk_producto}
             url={producto.file}
             key={producto.codigo}
-            categoria={producto.CATEGORIum}
+            categoria={producto.categoria}
+            precioDetalle={producto.monto}
           />
         ))}
       </div>

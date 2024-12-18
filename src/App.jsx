@@ -17,6 +17,7 @@ import MessageInfo from "./pages/MessageInfo";
 import OlvidePage from "./pages/OlvidePage";
 import CarritoPage from "./pages/CarritoPage";
 import ListadoCarroPage from "./pages/ListadoCarroPage";
+import OfertasPage from "./pages/OfertasPage"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="/productos" element={<ProductoPage />} />
       <Route path="/categorias/:idParams" element={<CategoriaPage />} />
       <Route path="/busqueda/:name" element={<BusquedaPage />} />
+      <Route path="/ofertas" element={<OfertasPage/>}/>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/registro" element={<RegistroPage />} />
       <Route
