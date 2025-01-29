@@ -41,7 +41,7 @@ const ProductoPage = () => {
         <>
           <Categoria categoria={producto.CATEGORIum} />
           <ProductoGrande producto={producto} />
-          <ProductosSimilares title="PRODUCTOS SIMILARES" setCurrentCodigo={setCurrentCodigo} idCategoria={producto.CATEGORIum.id} reloadName={"Cargar más"} />
+          <ProductosSimilares codigo={codigo} title="PRODUCTOS SIMILARES" setCurrentCodigo={setCurrentCodigo} idCategoria={producto.CATEGORIum.id} reloadName={"Cargar más"} />
         </>
       )}
     </>

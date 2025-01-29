@@ -1,6 +1,7 @@
 import Sucursal from "./Sucursal";
 
 const Sucursales = ({ title, sucursales, showUp, hide }) => {
+    console.log(sucursales)
   return (
     <>
       <h3
@@ -23,6 +24,7 @@ const Sucursales = ({ title, sucursales, showUp, hide }) => {
             id={s.id}
             key={s.id}
             showBig={s.showBig}
+            image={s.foto_url}
           />
         ))}
       </div>

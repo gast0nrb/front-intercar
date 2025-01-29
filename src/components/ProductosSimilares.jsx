@@ -2,20 +2,35 @@ import { useEffect, useState } from "react";
 import ProductosReload from "./ProductosReload";
 import WrapSimilares from "./WrapSimilares";
 
-const Productos = ({ title = "PUT SOME TITLE HERE", reloadName, idCategoria, setCurrentCodigo  }) => {
+const Productos = ({
+  title = "PUT SOME TITLE HERE",
+  reloadName,
+  idCategoria,
+  setCurrentCodigo,
+  codigo
+}) => {
   const [loading, setLoading] = useState(true);
   const [productos, setProductos] = useState({});
   const [contador, setContador] = useState(0);
 
   useEffect(() => {
     const fetchProds = async () => {
-      const response = await fetch(`http://localhost:8000/api/v0.5/webintercar/categorias/${idCategoria}/productos`);
-      const productosFetch = await response.json()
-      setProductos({success : productosFetch.success, data : productosFetch.data})
-      setLoading(false)
+      const response = await fetch(
+        `http://localhost:8000/api/v0.5/webintercar/categorias/${idCategoria}/productos`
+      );
+      const productosFetch = await response.json();
+      const productosFilter = productosFetch.data.Productos.filter((p)=> 
+         p.codigo != codigo 
+      )
+      productosFetch.data.Productos = productosFilter
+      setProductos({
+        success: productosFetch.success,
+        data: productosFetch.data,
+      });
+      setLoading(false);
     };
     fetchProds();
-  }, [loading]);
+  }, [codigo]);
 
   return (
     <>

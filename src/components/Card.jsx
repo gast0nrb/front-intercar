@@ -9,13 +9,20 @@ const Card = ({
   nombre_categoria,
   id_categoria,
   url,
-  setCurrentCodigo
+  setCurrentCodigo,
 }) => {
   return (
-    <div className="text-center my-14 w-11/12 mx-auto group hover:scale-105 rounded-md pb-4 shadow-md duration-300 hover:bg-neutral-800">
+    <div className="text-center md:my-2 lg:my-14 w-11/12 mx-auto group hover:scale-105 rounded-md pb-4 shadow-md duration-300 hover:bg-neutral-800">
       <div className="rounded-sm">
-        <Link onClick={()=> setCurrentCodigo(codigo)} to={`/producto/${codigo}`}>
-          <img className="rounded-sm w-full" src={url} alt={title} />
+        <Link
+          onClick={() => setCurrentCodigo(codigo)}
+          to={`/producto/${codigo}`}
+        >
+          <img
+            className="rounded-sm w-full"
+            src={`/images/defaultFile.png`}
+            alt={title}
+          />
         </Link>
       </div>
       <p className="p-0.5 group-hover:text-orange-500 text-neutral-300 text-xs bg-neutral-800">

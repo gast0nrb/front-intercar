@@ -59,9 +59,11 @@ const ProductosGroup = ({ categoriaActual }) => {
                   {productos.Categoria.Productos.map((p) => (
                     <CardCategory
                       precioDetalle={
-                        p.ListaProductos.filter(
-                          (lp) => lp.ListaPrecio.nombre == "Detalle"
-                        )[0].monto
+                        p.ListaProductos.length > 0
+                          ? p.ListaProductos.filter(
+                              (lp) => lp.ListaPrecio.nombre == "Detalle"
+                            )[0].monto
+                          : 0
                       }
                       title={p.titulo}
                       codigo={p.codigo}

@@ -17,7 +17,7 @@ const ProductosReload = ({title, changeContador}) => {
         {title}
         <img
           className={`w-5 ${active ? "animate-spin" : ""}`}
-          src="gearActive.svg"
+          src="/gearActive.svg"
           alt=""
         />
       </button>

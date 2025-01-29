@@ -12,14 +12,15 @@ const Sucursal = ({
   showUp,
   showBig,
   hide,
+  image,
 }) => {
   const [focus, setFocus] = useState(false);
-
+  console.log(image);
   return (
     <>
       <div className="border-b-2 shadow-md text-center group border-transparent hover:border-orange-500 duration-500">
         <div className="">
-          <img src="local.jpg" alt="" className=" w-12/12" />
+          <img src={image} alt="" className="object-cover w-full md:h-80 lg:h-64" />
         </div>
         <div className="">
           <h3
@@ -45,7 +46,7 @@ const Sucursal = ({
             </div>
             <div className="flex border-y-2 justify-center">
               <div className="my-auto lg:basis-5/12 md:basis-6/12 p-1 flex justify-center">
-                <img src="/road.svg" className="md:w-3 lg:w-4" alt="" />
+                <img src="/road.svg" className="md:w-3 lg:w-w4" alt="" />
                 <p className="font-bold">Viajar con</p>
               </div>
               <div className="border-l-2 grow">
