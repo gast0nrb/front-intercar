@@ -5,14 +5,14 @@ const Card = ({
   title,
   descripcion,
   precioDetalle,
-  precioMayorista,
   nombre_categoria,
   id_categoria,
   url,
   setCurrentCodigo,
+  hideCSS
 }) => {
   return (
-    <div className="text-center md:my-2 lg:my-14 w-11/12 mx-auto group hover:scale-105 rounded-md pb-4 shadow-md duration-300 hover:bg-neutral-800">
+    <div className={`${hideCSS} text-center md:my-2 lg:my-14 w-11/12 mx-auto group hover:scale-105 rounded-md pb-4 shadow-md duration-300 hover:bg-neutral-800`}>
       <div className="rounded-sm">
         <Link
           onClick={() => setCurrentCodigo(codigo)}

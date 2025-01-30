@@ -5,10 +5,10 @@ import ProductosWrap from "./ProductosWrap";
 const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
   const [loading, setLoading] = useState(true);
   const [productos, setProductos] = useState({ success: false, data: [] });
-  const [contador, setContador] = useState(0);
+  const [base, setBase] = useState(0)
 
-  useEffect(() => {
-    const fetchProds = async () => {
+const fetchProds = async () => {
+  try{
       const response = await fetch(
         "http://localhost:8000/api/v0.5/webintercar/ofertas"
       );
@@ -22,8 +22,12 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
           data: productosFetch.data,
         };
       });
+    }catch(err){
+      console.error('Error al cargar los productos')
+    }
     };
 
+useEffect(() => {
     fetchProds();
   }, [loading]);
 
@@ -32,17 +36,15 @@ const Productos = ({ title = "PUT SOME TITLE HERE", reloadName }) => {
       {!loading ? (
         <>
           <h3
-            className={`border-x-4 lg:w-fit md:w-11/12 text-center md:text-md lg:text-4xl xl:text-5xl font-extrabold md:mt-10 lg:mt-24 bg-neutral-800 mx-auto lg:px-4 rounded-sm text-neutral-300 lg:tracking-widest py-1 border-orange-500`}
+            className={`border-x-4 lg:w-fit md:w-11/12 text-center md:text-md lg:text-4xl xl:text-5xl font-extrabold md:mt-10 lg:mt-24 bg-neutral-800 mx-auto lg:px-4 rounded-sm text-neutral-300 lg:tracking-widest py-1 border-orange-500 md:my-2 lg:my-0`}
           >
             {title}
           </h3>
           <ProductosWrap
             Productos={productos}
-            contador={contador}
-            val1={0}
-            val2={1}
+            base={base}
           />
-          <ProductosReload title={reloadName} />
+          <ProductosReload title={reloadName} setBase={setBase} long={productos.data.length} base={base}/>
         </>
       ) : (
         <h3>Cargando información</h3>

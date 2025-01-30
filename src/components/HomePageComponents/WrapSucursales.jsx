@@ -22,7 +22,6 @@ const WrapSucursales = (width, height) => {
         return [...data.data];
       });
     };
-    console.log(sucursalesState[0]);
     getSucursales();
   }, [loading]);
 

@@ -15,7 +15,6 @@ const Sucursal = ({
   image,
 }) => {
   const [focus, setFocus] = useState(false);
-  console.log(image);
   return (
     <>
       <div className="border-b-2 shadow-md text-center group border-transparent hover:border-orange-500 duration-500">

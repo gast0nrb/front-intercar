@@ -1,13 +1,14 @@
 import Card from "./Card";
 
-const ProductosWrap = ({ Productos, setCurrentCodigo }) => {
+const ProductosWrap = ({ Productos, base }) => {
   return (
-      <div className="grid lg:grid-cols-3 md:grid-cols-2">
-        {Productos.data.Productos.map((product, i) => {
-          if (i <= 3) {
+      <div className="grid lg:grid-cols-3 md:grid-cols-1">
+        {Productos.data.Productos.filter((p, ix)=> ix >= base).map((product, i) => {
+          if(i >= 3){
+            return 
+          }
             return (
                 <Card
-                  setCurrentCodigo={setCurrentCodigo}
                   id_categoria={Productos.data.id}
                   nombre_categoria={Productos.data.nombre}
                   codigo={product.codigo}
@@ -20,10 +21,9 @@ const ProductosWrap = ({ Productos, setCurrentCodigo }) => {
                         )[0].monto
                       : 0
                   }
-
+                hideCSS={i > 0 ? 'md:hidden lg:block' :'' }
                 />
             );
-          }
         })}
       </div>
   );

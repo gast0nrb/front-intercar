@@ -1,7 +1,6 @@
 import Sucursal from "./Sucursal";
 
 const Sucursales = ({ title, sucursales, showUp, hide }) => {
-    console.log(sucursales)
   return (
     <>
       <h3
