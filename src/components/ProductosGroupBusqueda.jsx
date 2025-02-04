@@ -11,7 +11,11 @@ const ProductosGroup = ({ productos }) => {
             precioDetalle={
               producto.ListaProductos.filter(
                 (lp) => lp.ListaPrecio.nombre == "Detalle"
-              )[0].monto
+              )[0]?.monto
+                ? producto.ListaProductos.filter(
+                    (p) => p.ListaPrecio.nombre == "Detalle"
+                  )[0].monto
+                : 0
             }
             title={producto.titulo}
             codigo={producto.codigo}

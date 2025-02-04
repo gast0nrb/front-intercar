@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-const ProductosReload = ({title, setBase, long, base}) => {
+const ProductosReload = ({ title, setBase, long, base }) => {
   const [active, setActive] = useState(false);
-  function changeBase (){
+  function changeBase() {
     //Chequea si el valor base es mayor o igual que
     // el largo del array para no salir de los valores
     //3 son los que se despliegan por esa razón sse suma por 3.
-    if((base + 3) >= long){
-      setBase(0)
-      return
+    if (base + 3 >= long) {
+      setBase(0);
+      return;
     }
-    setBase(base + 1)
+    setBase(base + 1);
   }
   return (
     <div className="text-center">
@@ -20,7 +20,7 @@ const ProductosReload = ({title, setBase, long, base}) => {
           setActive(true);
           setTimeout(() => {
             setActive(false);
-            changeBase()
+            changeBase();
           }, 700);
         }}
       >

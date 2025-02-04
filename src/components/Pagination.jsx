@@ -1,38 +1,28 @@
 import Page from "./Page";
+import { useState } from "react";
 
-const Pagination = ({ pages }) => {
-  const displayItems = (q) => {
-    let arr = [];
-    for (let i = 0; i < 4; i++) {
-      //FIX WHEN IT'S 1 or less
-      if (pages > 4 && i >= 4) {
-        arr.push(<Page number={pages} />);
-      } else if (pages > 4 && i >= 3) {
-        arr.push(<Page number={pages - 1} />);
-      } else {
-        arr.push(<Page number={i + 1} />);
-      }
+const Pagination = ({ pages, page, setPage}) => {
+  console.log(pages)
+  function returnPages(){
+    const options = []
+    for (let i = 0; pages >= i; i++){
+      options.push(i+1)
     }
-    return arr;
-  };
-
+    return options
+  }
   return (
-  <>
-<div className="paginationx mb-10 flex justify-center">
-        <div className="">
-          <button className="w-10 text-neutral-300 bg-neutral-800 rounded-xl m-2 hover:text-orange-500">
-            &#60;
-          </button>
-        </div>
-          {displayItems(pages)}
-        <div>
-          <button className="w-10 text-neutral-300 bg-neutral-800 rounded-xl m-2 hover:text-orange-500">
-            &#62;
-          </button>
-        </div>
-      </div>
-  </>
-    );
+    <div className="w-full mb-5">
+      <h3 className="text-center font-bold">Selecciona una página</h3>
+      <select className="font-medium border-b-2 border-orange-500 px-2 rounded-sm block mx-auto text-center shadow-md bg-gray-200"
+        value={page}
+        onChange={(e)=> setPage(e.target.value)}
+      >
+      {
+         returnPages().map((option)=> <option className="" value={option}>{option}</option>) 
+      }
+    </select>
+    </div>
+  );
 };
 
-export default Pagination
+export default Pagination;

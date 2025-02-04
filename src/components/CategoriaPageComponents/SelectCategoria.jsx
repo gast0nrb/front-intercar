@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const SelectCategoria = ({ categoriaActual, setCategoriaActual }) => {
+const SelectCategoria = ({ categoriaActual, setCategoriaActual, setPage }) => {
   const [cargandoCategorias, setCargandoCategorias] = useState(true);
   const [categorias, setCategorias] = useState([{id: 0, nombre : "--   Seleccionar   --"}]);
 
@@ -30,6 +30,7 @@ const SelectCategoria = ({ categoriaActual, setCategoriaActual }) => {
         <p className="font-bold text-xl text-neutral-800">CATEGORIAS</p>
         <select
           onChange={(e) => {
+            setPage(1);
             setCategoriaActual(e.target.value);
             navigate("/categorias/" + e.target.value);
           }}

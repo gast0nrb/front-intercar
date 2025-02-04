@@ -7,6 +7,7 @@ import BusquedaTitle from "../components/BusquedaPageComponents/BusquedaTitle";
 const BusquedaPage = ({ title }) => {
   const [existen, setExisten] = useState(false);
   const [productos, setProductos] = useState([]);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     async function getProductos() {
@@ -31,21 +32,16 @@ const BusquedaPage = ({ title }) => {
       }
 
       setExisten(true);
-      console.log(productos);
     }
     getProductos();
-  }, [existen]);
+  }, []);
   return (
     <>
       {existen ? (
         <>
           <BusquedaTitle title="Productos en oferta" />
-          <ProductosOferta
-            productos={productos}
-            setExisten={setExisten}
-            isBusqueda={true}
-          />
-          <Pagination pages={6} />
+          <ProductosOferta productos={productos} setExisten={setExisten} />
+          <Pagination pages={productos.length / 10} page={page} setPage={setPage}/>
         </>
       ) : (
         <>

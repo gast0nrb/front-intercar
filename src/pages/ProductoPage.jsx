@@ -9,7 +9,7 @@ const ProductoPage = () => {
   const { codigo } = useParams();
 
   const [producto, setProducto] = useState({});
-  const [currentCodigo, setCurrentCodigo] = useState(codigo)
+  const [currentCodigo, setCurrentCodigo] = useState(codigo);
   const [noExiste, setNoExiste] = useState(true);
 
   const getProducto = async () => {
@@ -41,7 +41,13 @@ const ProductoPage = () => {
         <>
           <Categoria categoria={producto.CATEGORIum} />
           <ProductoGrande producto={producto} />
-          <ProductosSimilares codigo={codigo} title="PRODUCTOS SIMILARES" setCurrentCodigo={setCurrentCodigo} idCategoria={producto.CATEGORIum.id} reloadName={"Cargar más"} />
+          <ProductosSimilares
+            codigo={codigo}
+            title="PRODUCTOS SIMILARES"
+            setCurrentCodigo={setCurrentCodigo}
+            idCategoria={producto.CATEGORIum.id}
+            reloadName={"Cargar más"}
+          />
         </>
       )}
     </>

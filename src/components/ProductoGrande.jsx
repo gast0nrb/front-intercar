@@ -27,7 +27,11 @@ const ProductoGrande = ({ producto }) => {
           <p className="font-bold duration-300">
             DETALLE{" "}
             <span className="font-normal">
-              ${producto.ListaProductos.filter((v) => v.fk_lista == 2)[0].monto}
+              $
+              {producto.ListaProductos.filter((v) => v.fk_lista == 2)[0]?.monto
+                ? producto.ListaProductos.filter((v) => v.fk_lista == 2)[0]
+                    .monto
+                : 0}
             </span>
           </p>
         </div>

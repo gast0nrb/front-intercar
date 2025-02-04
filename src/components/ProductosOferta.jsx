@@ -7,7 +7,6 @@ const ProductosGroup = ({ productos }) => {
       <div className="grid md:grid-cols-1 lg:grid-cols-3 mx-auto w-11/12">
         {productos.map((producto) => (
           <CardOferta
-            isBusqueda={true}
             title={producto.titulo}
             codigo={producto.fk_producto}
             url={producto.file}

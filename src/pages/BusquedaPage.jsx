@@ -51,12 +51,7 @@ const BusquedaPage = ({ title }) => {
       {existen ? (
         <>
           <BusquedaTitle title={name} />
-          <ProductosGroupBusqueda
-          productos={productos}
-            currentCategoria={currentCategoria}
-            setExisten={setExisten}
-            isBusqueda={true}
-          />
+          <ProductosGroupBusqueda productos={productos} />
           <Pagination pages={6} />
         </>
       ) : (

@@ -2,7 +2,7 @@ import Card from "./Card";
 
 const ProductosWrap = ({ Productos, base }) => {
   return (
-      <div className="grid lg:grid-cols-3 md:grid-cols-1">
+      <div className="grid lg:grid-cols-3 md:grid-cols-1 w-11/12 mx-auto my-5">
         {Productos.data.Productos.filter((p, ix)=> ix >= base).map((product, i) => {
           if(i >= 3){
             return 
