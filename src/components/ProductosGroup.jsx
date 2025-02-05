@@ -11,7 +11,6 @@ const ProductosGroup = ({ categoriaActual, setCategoriaActual }) => {
   const [cargandoProductos, setCargandoProductos] = useState(true);
   const [categoriaInexistente, setCategoriaInexistente] = useState(true);
   const [page, setPage] = useState(1);
-  const [order, setOrder] = useState(0);
 
   useEffect(() => {
     async function getProductos() {
@@ -89,7 +88,6 @@ const ProductosGroup = ({ categoriaActual, setCategoriaActual }) => {
                     setCategoriaActual={setCategoriaActual}
                     setPage={setPage}
                   />
-                  <SelectOrder />
                   <div className="grid md:grid-cols-1 lg:grid-cols-3 mx-auto w-11/12">
                     {productos.Categoria.Productos.filter((prod, i) => {
                       if (
