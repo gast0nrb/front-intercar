@@ -11,7 +11,9 @@ const CardCategory = ({
     <div className="group shadow-md m-5 my-10 rounded-md lg:hover:scale-110 duration-300">
       <div className="">
         <Link to={`/producto/${codigo}`}>
-          <img src={`${url}`} alt="" className="rounded-t-md" />
+          <img 
+            src={`http://localhost:8000/api/v0.5/webintercar/imagenes/${codigo}`}
+           alt="" className="rounded-t-md" />
         </Link>
       </div>
       <div className="data-container text-center group-hover:bg-neutral-800 group-hover:text-neutral-300 duration-300 pb-2">

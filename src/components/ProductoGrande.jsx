@@ -5,11 +5,11 @@ const ProductoGrande = ({ producto }) => {
         <p className=" rounded-t-sm text-orange-500 text-xs font-bold bg-neutral-800 lg:rounded-sm p-1">
           SKU: {producto.codigo}
         </p>
-        <img
-          src={`${producto.file}`}
-          alt=""
+          <img
           className=" w-full h-full lg:rounded-b-sm"
-        />
+            src={`http://localhost:8000/api/v0.5/webintercar/imagenes/${producto.codigo}`}
+            alt={producto.title}
+          />
       </div>
       <div className="md:w-11/12 lg:w-2/5 lg:flex-wrap shadow-lg rounded-md md:mx-auto lg:mx-0 group">
         <div className="descripcion text-center duration-300">

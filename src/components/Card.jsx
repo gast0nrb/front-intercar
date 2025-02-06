@@ -20,7 +20,7 @@ const Card = ({
         >
           <img
             className="rounded-sm w-full"
-            src={`/images/defaultFile.png`}
+            src={`http://localhost:8000/api/v0.5/webintercar/imagenes/${codigo}`}
             alt={title}
           />
         </Link>
